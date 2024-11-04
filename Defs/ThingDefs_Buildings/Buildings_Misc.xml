@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Gha_ObeliskSuppressor</defName>
+    <label>obelisk suppressor</label>
+    <description>Obelisk suppressor description.</description>
+    <tickerType>Normal</tickerType>
+    <size>(2,2)</size>
+    <graphicData>
+      <drawSize>(2,2)</drawSize>
+      <texPath>Things/Buildings/Misc/Obelisk_Suppressor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.25</fillPercent>
+    <designationCategory>Anomaly</designationCategory>
+    <uiOrder>501</uiOrder>
+    <canOverlapZones>false</canOverlapZones>
+    <thingCategories>
+      <li>BuildingsSpecial</li>
+    </thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>6000</WorkToBuild>
+      <Flammability>0.7</Flammability>
+      <Mass>20</Mass>
+    </statBases>
+    <costList>
+      <Shard>1</Shard>
+      <Steel>15</Steel>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <tradeTags>
+      <li>ExoticBuilding</li>
+    </tradeTags>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <building>
+      <buildingTags>
+        <li>Anomaly</li>
+      </buildingTags>
+    </building>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>75</basePowerConsumption>
+      </li>
+      <li Class="ProjectAnomalySyndicate.CompProperties_FacilityObeliskSuppressor">
+        <activityDecreasePerTick>10</activityDecreasePerTick>
+        <maxSimultaneous>1</maxSimultaneous>
+        <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+  </ThingDef>
+</Defs>
