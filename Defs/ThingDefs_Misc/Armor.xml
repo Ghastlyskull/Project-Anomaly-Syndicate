@@ -56,4 +56,200 @@
           <li>PlaceWorker_ProximityDetector</li>
         </placeWorkers>
       </ThingDef>
+
+      <!--Exterminator Armor-->
+      <ThingDef ParentName="ApparelArmorExterminatorBase">
+        <defName>Apparel_ArmorExterminator</defName>
+        <label>exterminator armor</label>
+        <description>A suit of heavy powered armor, built for maximum protection at the cost of mobility. Heavy layered plasteel-weave plates with solid ablative coatings stop all but the most well-aimed or powerful attacks. Neuro-memetic assistors prevent the suit's massive weight from immobilizing the wearer entirely, but the suit is still quite cumbersome.\n\nArmor like this is used by imperial cataphracts to break heavily fortified positions in frontal assaults when no other option is available.</description>
+        <tradeTags>
+          <li>Armor</li>
+        </tradeTags>
+        <recipeMaker>
+          <displayPriority>125</displayPriority>
+        </recipeMaker>
+      </ThingDef>
+    
+      <ThingDef ParentName="ApparelArmorHelmetExterminatorBase">
+        <defName>Apparel_ArmorHelmetExterminator</defName>
+        <label>exterminator helmet</label>
+        <description>A heavily-armored high-tech helmet, with a solid plasteel-weave shell and indirect visual system for non-frontal view angles. It protects against all but the most powerful or luckily-aimed shots.\n\nArmor like this is used by imperial cataphracts to break heavily fortified positions in frontal assaults when no other option is available.</description>
+        <recipeMaker>
+          <displayPriority>120</displayPriority>
+        </recipeMaker>
+      </ThingDef>
+
+      <!--ThingDef/Base Exterminator-->
+      <ThingDef Name="ApparelArmorExterminatorBase" ParentName="ArmorMachineableBase" Abstract="True">
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+          <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+          <researchPrerequisite>Gha_Research_Exterminator_Armor</researchPrerequisite>
+          <skillRequirements>
+            <Crafting>8</Crafting>
+          </skillRequirements>
+          <recipeUsers Inherit="False">
+            <li>FabricationBench</li>
+          </recipeUsers>
+        </recipeMaker>
+        <graphicData>
+          <texPath>Things/Pawn/Humanlike/Apparel/CataphractArmor/CataphractArmor</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.25</uiIconScale>
+        <generateCommonality>2</generateCommonality>
+        <statBases>
+          <WorkToMake>75000</WorkToMake>
+          <MaxHitPoints>400</MaxHitPoints>
+          <Mass>15</Mass>
+          <Flammability>0.4</Flammability>
+          <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.6</ArmorRating_Heat>
+          <Insulation_Cold>36</Insulation_Cold>
+          <Insulation_Heat>12</Insulation_Heat>
+          <EquipDelay>17</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+          <MoveSpeed>-0.8</MoveSpeed>
+        </equippedStatOffsets>
+        <tradeTags>
+          <li>HiTechArmor</li>
+        </tradeTags>
+        <thingCategories>
+          <li>ApparelArmor</li>
+        </thingCategories>
+        <costList>
+          <ComponentSpacer>6</ComponentSpacer>
+          <Plasteel>150</Plasteel>
+          <Uranium>50</Uranium>
+        </costList>
+        <apparel>
+          <bodyPartGroups>
+            <li>Torso</li>
+            <li>Neck</li>
+            <li>Shoulders</li>
+            <li>Arms</li>
+            <li>Legs</li>
+          </bodyPartGroups>
+          <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CataphractArmor/CataphractArmor</wornGraphicPath>
+          <layers>
+            <li>Middle</li>
+            <li>Shell</li>
+          </layers>
+          <defaultOutfitTags>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <useDeflectMetalEffect>true</useDeflectMetalEffect>
+          <soundWear>Wear_PowerArmor</soundWear>
+          <soundRemove>Remove_PowerArmor</soundRemove>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <weight>10</weight>
+              <only>(0.9,0.9,0.9)</only>
+            </li>
+            <li>
+              <weight>10</weight>
+              <only>(0.33,0.33,0.33)</only>
+            </li>
+            <li>
+              <weight>10</weight>
+              <only>(0.65,0.65,0.65)</only>
+            </li>
+            <li>
+              <weight>6</weight>
+              <min>(0.3,0.3,0.3)</min>
+              <max>(0.5,0.5,0.5)</max>
+            </li>
+          </options>
+        </colorGenerator>
+        <comps>
+          <li Class="CompProperties_Biocodable"/>
+        </comps>
+        <thingSetMakerTags>
+          <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+      </ThingDef>
+    
+      <ThingDef Name="ApparelArmorHelmetExterminatorBase" ParentName="ArmorHelmetMakeableBase" Abstract="True">
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+          <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+          <researchPrerequisite>Gha_Research_Exterminator_Armor</researchPrerequisite>
+          <skillRequirements>
+            <Crafting>8</Crafting>
+          </skillRequirements>
+          <recipeUsers Inherit="False">
+            <li>FabricationBench</li>
+          </recipeUsers>
+        </recipeMaker>
+        <graphicData>
+          <texPath>Things/Pawn/Humanlike/Apparel/CataphractArmorHelmet/CataphractHelmet</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(0.9, 0.9)</drawSize>
+        </graphicData>
+        <tradeTags>
+          <li>HiTechArmor</li>
+          <li>Armor</li>
+        </tradeTags>
+        <generateCommonality>2</generateCommonality>
+        <statBases>
+          <WorkToMake>26250</WorkToMake>
+          <MaxHitPoints>180</MaxHitPoints>
+          <Mass>2</Mass>
+          <Flammability>0.4</Flammability>
+          <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.6</ArmorRating_Heat>
+          <Insulation_Cold>4</Insulation_Cold>
+          <Insulation_Heat>2</Insulation_Heat>
+          <EquipDelay>6</EquipDelay>
+        </statBases>
+        <costList>
+          <ComponentSpacer>1</ComponentSpacer>
+          <Plasteel>50</Plasteel>
+        </costList>
+        <apparel>
+          <bodyPartGroups>
+            <li>FullHead</li>
+          </bodyPartGroups>
+          <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CataphractArmorHelmet/CataphractHelmet</wornGraphicPath>
+          <layers>
+            <li>Overhead</li>
+          </layers>
+          <defaultOutfitTags>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <useDeflectMetalEffect>true</useDeflectMetalEffect>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <weight>10</weight>
+              <only>(0.33,0.33,0.33,1)</only>
+            </li>
+            <li>
+              <weight>10</weight>
+              <only>(0.65,0.65,0.65,1)</only>
+            </li>
+            <li>
+              <weight>6</weight>
+              <min>(0.3,0.3,0.3,1)</min>
+              <max>(0.5,0.5,0.5,1)</max>
+            </li>
+            <li>
+              <weight>10.1</weight>
+              <only>(0.9,0.9,0.9,1)</only>
+            </li>
+          </options>
+        </colorGenerator>
+        <comps>
+          <li Class="CompProperties_Biocodable"/>
+        </comps>
+        <thingSetMakerTags>
+          <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+      </ThingDef>
 </Defs>

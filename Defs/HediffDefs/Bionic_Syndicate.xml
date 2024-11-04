@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--Spitbane Implant-->
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>Spitbane</defName>
+        <label>spitbane</label>
+        <labelNoun>a spitbane implant</labelNoun>
+        <description>An installed neurocalculator. A non-intelligent microcomputer controlled by a visual/tactile neural interface. It assists with memory and calculation, like a calculator and notepad embedded in the brain.</description>
+        <descriptionHyperlinks><ThingDef>Spitbane</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>Spitbane</spawnThingOnRemoved>
+        <stages>
+          <li>
+            <statOffsets>
+              <ResearchSpeed>0.2</ResearchSpeed>
+            </statOffsets>
+          </li>
+        </stages>
+        <comps>
+          <li Class="HediffCompProperties_ReactOnDamage">
+            <damageDefIncoming>EMP</damageDefIncoming>
+            <createHediff>BrainShock</createHediff>
+          </li>
+        </comps>
+    </HediffDef>
+    
+    <ThingDef ParentName="BodyPartBionicSyndicateBase">
+        <defName>Spitbane</defName>
+        <label>spitbane</label>
+        <description>A non-intelligent microcomputer controlled by a visual/tactile neural interface. It assists with memory and calculation, like a calculator and notepad embedded in the brain.</description>
+        <descriptionHyperlinks><RecipeDef>InstallSpitbane</RecipeDef></descriptionHyperlinks>
+        <graphicData>
+          <texPath>Things/Item/Health/HealthItem</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>0.80</drawSize>
+          <color>(189,169,118)</color>
+        </graphicData>
+        <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+        <costList>
+          <Plasteel>15</Plasteel>
+          <ComponentSpacer>4</ComponentSpacer>
+        </costList>
+        <recipeMaker>
+            <!--Make new research for implants-->
+          <researchPrerequisite>Gha_Research_Anomaly_BionicCountermeasures</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+    
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallSpitbane</defName>
+        <label>install spitbane implant</label>
+        <description>Install a spitbane implant.</description>
+        <descriptionHyperlinks>
+          <ThingDef>Spitbane</ThingDef>
+          <HediffDef>Spitbane</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing spitbane implant.</jobString>
+        <ingredients>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>Spitbane</li>
+              </thingDefs>
+            </filter>
+            <count>1</count>
+          </li>
+        </ingredients>
+        <fixedIngredientFilter>
+          <thingDefs>
+            <li>Spitbane</li>
+          </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <!--Change the part effected to whole-->
+          <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>Spitbane</addsHediff>
+    </RecipeDef>
+
+    <!--Cerebral Fortifier-->
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>CerebralFortifier</defName>
+        <label>cerebral fortifier</label>
+        <labelNoun>a cerebral fortifier</labelNoun>
+        <description>An installed neurocalculator. A non-intelligent microcomputer controlled by a visual/tactile neural interface. It assists with memory and calculation, like a calculator and notepad embedded in the brain.</description>
+        <descriptionHyperlinks><ThingDef>CerebralFortifier</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>Spitbane</spawnThingOnRemoved>
+        <stages>
+          <li>
+            <statOffsets>
+              <ResearchSpeed>0.2</ResearchSpeed>
+            </statOffsets>
+          </li>
+        </stages>
+        <comps>
+          <li Class="HediffCompProperties_ReactOnDamage">
+            <damageDefIncoming>EMP</damageDefIncoming>
+            <createHediff>BrainShock</createHediff>
+          </li>
+        </comps>
+      </HediffDef>
+    
+      <ThingDef ParentName="BodyPartBionicSyndicateBase">
+        <defName>CerebralFortifier</defName>
+        <label>cerebral fortifier</label>
+        <description>A non-intelligent microcomputer controlled by a visual/tactile neural interface. It assists with memory and calculation, like a calculator and notepad embedded in the brain.</description>
+        <descriptionHyperlinks><RecipeDef>InstallCerebralFortifier</RecipeDef></descriptionHyperlinks>
+        <graphicData>
+          <texPath>Things/Item/Health/HealthItem</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>0.80</drawSize>
+          <color>(189,169,118)</color>
+        </graphicData>
+        <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+        <costList>
+          <Plasteel>15</Plasteel>
+          <ComponentSpacer>4</ComponentSpacer>
+        </costList>
+        <recipeMaker>
+            <!--Make new research for implants-->
+          <researchPrerequisite>Gha_Research_Anomaly_BionicCountermeasures</researchPrerequisite>
+        </recipeMaker>
+      </ThingDef>
+    
+      <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallCerebralFortifier</defName>
+        <label>install cerebral fortifier implant</label>
+        <description>Install a cerebral fortifier implant.</description>
+        <descriptionHyperlinks>
+          <ThingDef>CerebralFortifier</ThingDef>
+          <HediffDef>CerebralFortifier</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing spitbane implant.</jobString>
+        <ingredients>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>CerebralFortifier</li>
+              </thingDefs>
+            </filter>
+            <count>1</count>
+          </li>
+        </ingredients>
+        <fixedIngredientFilter>
+          <thingDefs>
+            <li>CerebralFortifier</li>
+          </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <!--Change the part effected to whole-->
+          <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>CerebralFortifier</addsHediff>
+      </RecipeDef>
+</Defs>
