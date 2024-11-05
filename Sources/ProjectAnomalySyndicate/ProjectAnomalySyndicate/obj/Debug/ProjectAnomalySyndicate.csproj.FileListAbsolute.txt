@@ -45,3 +45,9 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood-Rain-Immunity\
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood-Rain-Immunity\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.csproj.CoreCompileInputs.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood-Rain-Immunity\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood-Rain-Immunity\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Invisibility-Disruptor-Comp\Assemblies\ProjectAnomalySyndicate.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Invisibility-Disruptor-Comp\Assemblies\ProjectAnomalySyndicate.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Invisibility-Disruptor-Comp\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Invisibility-Disruptor-Comp\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Invisibility-Disruptor-Comp\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Invisibility-Disruptor-Comp\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.pdb
