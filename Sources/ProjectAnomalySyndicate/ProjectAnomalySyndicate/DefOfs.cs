@@ -11,6 +11,7 @@ namespace ProjectAnomalySyndicate
     [DefOf]
     public static class DefOfs
     {
-        public static ThingDef Gha_ObeliskSuppressor;   
+        public static ThingDef Gha_ObeliskSuppressor;
+        public static HediffDef Spitbane;
     }
 }

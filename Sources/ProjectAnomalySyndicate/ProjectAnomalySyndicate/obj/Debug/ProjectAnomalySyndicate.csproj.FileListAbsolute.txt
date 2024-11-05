@@ -51,3 +51,9 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Invisibility-Disrupt
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Invisibility-Disruptor-Comp\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.csproj.CoreCompileInputs.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Invisibility-Disruptor-Comp\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Invisibility-Disruptor-Comp\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\devourer-spit-comp\Assemblies\ProjectAnomalySyndicate.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\devourer-spit-comp\Assemblies\ProjectAnomalySyndicate.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\devourer-spit-comp\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\devourer-spit-comp\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\devourer-spit-comp\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\devourer-spit-comp\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.pdb
