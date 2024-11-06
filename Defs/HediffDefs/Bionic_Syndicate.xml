@@ -97,6 +97,11 @@
             <createHediff>BrainShock</createHediff>
           </li>
         </comps>
+      <modExtensions>
+        <li Class="ProjectAnomalySyndicate.HypnosisResistanceModExtension">
+          <percentageIncrease>0.5</percentageIncrease>
+        </li>
+      </modExtensions>
       </HediffDef>
     
       <ThingDef ParentName="BodyPartBionicSyndicateBase">
