@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HarmonyPatches\DevourerAbortDigestionSpitbanePatch.cs" />
+    <Compile Include="HarmonyPatches\HypnosisResistancePatches.cs" />
+    <Compile Include="HypnosisResistanceModExtension.cs" />
     <Compile Include="InvisibilityDisruptorModExtension.cs" />
     <Compile Include="BloodRainResistanceModExtension.cs" />
     <Compile Include="CompFacilityObeliskSuppressor.cs" />
