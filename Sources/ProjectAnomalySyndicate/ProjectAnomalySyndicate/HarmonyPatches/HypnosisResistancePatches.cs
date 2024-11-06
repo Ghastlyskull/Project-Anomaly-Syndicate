@@ -18,7 +18,7 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
     {
         public static int CalculateHypnosisResistance(int originalValue, Pawn pawn)
         {
-            Log.Message("Original value " + originalValue);
+            //Log.Message("Original value " + originalValue);
             int result = originalValue;
             IEnumerable<Hediff> hediffs = pawn.health.hediffSet.hediffs.Where(c => c.def.HasModExtension<HypnosisResistanceModExtension>());
             if (hediffs.Any())
@@ -28,7 +28,7 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
                     result += (int)(originalValue * hediff.def.GetModExtension<HypnosisResistanceModExtension>().percentageIncrease);
                 }
             }
-            Log.Message("Altered value " + result);
+            //Log.Message("Altered value " + result);
             return result;
         }
     }
