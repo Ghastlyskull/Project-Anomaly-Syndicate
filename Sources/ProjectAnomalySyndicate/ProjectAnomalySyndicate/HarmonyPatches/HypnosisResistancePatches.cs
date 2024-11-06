@@ -18,7 +18,7 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
     {
         public static int CalculateHypnosisResistance(int originalValue, Pawn pawn)
         {
-            //Log.Message("Original value " + originalValue);
+            Log.Message("Original value " + originalValue);
             int result = originalValue;
             IEnumerable<Hediff> hediffs = pawn.health.hediffSet.hediffs.Where(c => c.def.HasModExtension<HypnosisResistanceModExtension>());
             if (hediffs.Any())
@@ -28,7 +28,7 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
                     result += (int)(originalValue * hediff.def.GetModExtension<HypnosisResistanceModExtension>().percentageIncrease);
                 }
             }
-            //Log.Message("Altered value " + result);
+            Log.Message("Altered value " + result);
             return result;
         }
     }
@@ -41,18 +41,20 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
         }
         private static void Postfix(ref int __result, JobDriver_RevenantAttack __instance)
         {
-            Log.Message("original value" + __result);
-            int original = __result;
-            IEnumerable<Hediff> hediffs = ((Pawn)__instance.job.targetA.Thing).health.hediffSet.hediffs.Where(c => c.def.HasModExtension<HypnosisResistanceModExtension>());
-            if (hediffs.Any())
-            {
-                foreach (Hediff hediff in hediffs)
-                {
-                    __result += (int)(original * hediff.def.GetModExtension<HypnosisResistanceModExtension>().percentageIncrease);
-                }
-            }
-            Log.Message("modified value" + __result);
+            __result = HypnosisResistanceHelper.CalculateHypnosisResistance(__result, (Pawn)__instance.job.targetA.Thing);
         }
     }
-  
+    [HarmonyPatch]
+    public static class HypnosisResistanceUnnaturalCorpsePatch
+    {
+        private static MethodBase TargetMethod()
+        {
+            return AccessTools.Method(typeof(UnnaturalCorpseTracker), "AwakeningTick");
+        }
+        private static void Postfix(UnnaturalCorpseTracker __instance, ref int ___ticksToKill)
+        {
+            ___ticksToKill = HypnosisResistanceHelper.CalculateHypnosisResistance(___ticksToKill, __instance.Haunted);
+        }
+    }
+
 }
