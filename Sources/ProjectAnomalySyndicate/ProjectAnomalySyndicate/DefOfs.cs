@@ -13,5 +13,7 @@ namespace ProjectAnomalySyndicate
     {
         public static ThingDef Gha_ObeliskSuppressor;
         public static HediffDef Spitbane;
+        public static MutantDef GhoulWork;
+        public static JobDef UseMindWake;
     }
 }

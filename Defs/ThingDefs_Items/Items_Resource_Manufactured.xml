@@ -46,13 +46,12 @@
             <showUseGizmo>true</showUseGizmo>
           </li>
           <li Class="CompProperties_Targetable">
-            <compClass>CompTargetable_SingleCorpse</compClass>
-            <fleshCorpsesOnly>true</fleshCorpsesOnly>
-            <mutantFilter>Ghoul</mutantFilter>
+            <compClass>ProjectAnomalySyndicate.CompTargetable_SingleMutant</compClass>
+            
           </li>
-          <li Class="CompProperties_TargetEffectResurrect">
+          <li Class="ProjectAnomalySyndicate.CompProperties_TargetEffectMindwake">
             <withSideEffects>false</withSideEffects>
-            <addsHediff>ResurrectionComa</addsHediff>
+            <addsHediff>MindWakeSerum_Awakening</addsHediff>
           </li>
         </comps>
       </ThingDef>
