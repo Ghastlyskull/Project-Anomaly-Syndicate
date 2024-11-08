@@ -136,16 +136,37 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
         }
         private static void Postfix(ITab_Pawn_Gear __instance, ref bool __result)
         {
-           
+
             if (__instance.SelPawnForGear != null && __instance.SelPawnForGear.Spawned && __instance.SelPawnForGear.Faction.IsPlayer && __instance.SelPawnForGear.RaceProps.Humanlike && __instance.SelPawnForGear.IsMutant && __instance.SelPawnForGear.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake))))
             {
                 __result = true;
             }
 
 
-        }    
+        }
     }
     #endregion
 
-
+    #region ApparelImplantCheck
+    [HarmonyPatch]
+    public static class ApparelImplantCheckPatch
+    {
+        private static MethodBase TargetMethod()
+        {
+            return AccessTools.Method(typeof(EquipmentUtility), "CanEquip", new Type[] {typeof(Thing), typeof(Pawn), typeof(string).MakeByRefType(), typeof(bool)});
+        }
+        private static void Postfix(ref bool __result, Thing thing, Pawn pawn, out string cantReason, bool checkBonded = true)
+        {
+            if (__result && pawn.IsMutant && pawn.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake)) && pawn.health.hediffSet.hediffs.Any(c => c.def == HediffDefOf.GhoulBarbs || c.def == HediffDefOf.GhoulPlating)) && thing.def.apparel.bodyPartGroups.Any(c => c == BodyPartGroupDefOf.Torso || c == BodyPartGroupDefOf.Legs))
+            {
+                __result = false;
+                cantReason = "GhoulCantWearDueToImplants".Translate();
+            }
+            else
+            {
+                cantReason = null;
+            }
+        }
+    }
+    #endregion
 }
