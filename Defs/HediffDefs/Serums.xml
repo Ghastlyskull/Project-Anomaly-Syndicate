@@ -5,21 +5,12 @@
         <hediffClass>HediffWithComps</hediffClass>
         <label>ghoul awakening</label>
         <description>A mixture of deadlife dust and advanced biochemicals course through this creature’s veins.</description>
-        <stages>
-          <li>
-            <capMods>
-              <li>
-                <capacity>Consciousness</capacity>
-                <setMax>0.1</setMax>
-              </li>
-            </capMods>
-          </li>
-      </stages>
         <comps>
           <li Class="HediffCompProperties_Disappears">
             <disappearsAfterTicks>10000~15000</disappearsAfterTicks> <!-- 4 ~ 6 hours -->
             <showRemainingTime>true</showRemainingTime>
           </li>
+          <li Class="ProjectAnomalySyndicate.CompProperties_MindWake"/>
         </comps>
       </HediffDef>
 </Defs>
