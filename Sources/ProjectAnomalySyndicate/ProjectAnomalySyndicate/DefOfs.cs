@@ -16,5 +16,15 @@ namespace ProjectAnomalySyndicate
         public static MutantDef GhoulWork;
         public static JobDef UseMindWake;
         public static IncidentDef FleshbeastsAttackWalkin;
+        public static PawnKindDef Gha_Syndicate_Royal_Bestower;
+        public static PawnKindDef Gha_Syndicate_Fighter_Janissary;
+        public static ThingDef Gha_BuildingDataChip;
+        public static ThingDef Gha_WeaponDataChip;
+        public static ThingDef Gha_SerumDataChip;
+        public static ThingDef Gha_ArmorDataChip;
+        public static ThingDef Gha_MechanoidDataChip;
+        public static FactionDef Gha_Syndicate;
+        public static QuestScriptDef Gha_BestowingCeremony;
     }
+
 }

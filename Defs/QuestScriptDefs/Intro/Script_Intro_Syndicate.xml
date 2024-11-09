@@ -77,7 +77,7 @@
         </li>
 
         <li Class="QuestNode_Delay">
-          <delayTicks>1800</delayTicks>
+          <delayTicks>1000</delayTicks>
           <node Class="QuestNode_ViolentQuestsAllowed">
             <node Class="ProjectAnomalySyndicate.Quests.QuestNode_Fingerspike">
               <customLetterLabel TKey="LetterLabelAngryAnimal">Fleshbeasts</customLetterLabel>
