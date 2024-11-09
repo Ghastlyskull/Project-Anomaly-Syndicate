@@ -26,7 +26,7 @@
         <li>QuestHospitalityCommon</li>
       </include>
       <rulesStrings>
-        <li>questDescription->[asker_nameFull], a [asker_royalTitleInCurrentFaction] of [asker_faction_name] is calling from nearby. [asker_possessive] guards were killed in an ambush. [asker_pronoun] escaped, but is now being followed by (*Threat)a manhunting [animalKindDef_label](/Threat).\n\n[asker_nameDef] wants you to keep [asker_objective] safe at [map_definite] for a few hours until [asker_possessive] shuttle can come pick [asker_objective] up.
+        <li>questDescription->[asker_nameFull], a [asker_royalTitleInCurrentFaction] of [asker_faction_name] is calling from nearby. [asker_possessive] guards were killed in an ambush. [asker_pronoun] escaped, but is now being followed by (*Threat)fleshbeasts(/Threat).\n\n[asker_nameDef] wants you to keep [asker_objective] safe at [map_definite] for a few hours until [asker_possessive] shuttle can come pick [asker_objective] up.
 \n[asker_pronoun] will bestow [royalFavorReward] [asker_faction_royalFavorLabel] on whoever accepts this quest. This is enough [asker_faction_royalFavorLabel] to receive the royal title of auxiliary, and all benefits that come with it - including the first level of psychic powers.</li>
       </rulesStrings>
     </questDescriptionRules>
@@ -76,17 +76,12 @@
           <pawns>$asker</pawns>
         </li>
 
-        <!-- Manhunter animal -->
-        <li Class="QuestNode_Set">
-          <name>points</name>
-          <value>50</value> <!-- Enough points to get a single weak animal -->
-        </li>
         <li Class="QuestNode_Delay">
           <delayTicks>1800</delayTicks>
           <node Class="QuestNode_ViolentQuestsAllowed">
             <node Class="ProjectAnomalySyndicate.Quests.QuestNode_Fingerspike">
-              <customLetterLabel TKey="LetterLabelAngryAnimal">Manhunting [animalKindDef_label]</customLetterLabel>
-              <customLetterText TKey="LetterTextAngryAnimal">The [animalKindDef_label] which was following [asker_nameFull] has arrived in the area.</customLetterText>
+              <customLetterLabel TKey="LetterLabelAngryAnimal">Fleshbeasts</customLetterLabel>
+              <customLetterText TKey="LetterTextAngryAnimal">The creatures which were following [asker_nameFull] have arrived in the area.</customLetterText>
             </node>
             <elseNode Class="QuestNode_Sequence">
               <nodes>

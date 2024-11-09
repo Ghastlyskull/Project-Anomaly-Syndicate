@@ -15,5 +15,6 @@ namespace ProjectAnomalySyndicate
         public static HediffDef Spitbane;
         public static MutantDef GhoulWork;
         public static JobDef UseMindWake;
+        public static IncidentDef FleshbeastsAttackWalkin;
     }
 }
