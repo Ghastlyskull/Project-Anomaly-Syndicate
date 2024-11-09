@@ -84,8 +84,7 @@
         <li Class="QuestNode_Delay">
           <delayTicks>1800</delayTicks>
           <node Class="QuestNode_ViolentQuestsAllowed">
-            <node Class="QuestNode_ManhunterPack">
-              <animalCount>1</animalCount>
+            <node Class="ProjectAnomalySyndicate.Quests.QuestNode_Fingerspike">
               <customLetterLabel TKey="LetterLabelAngryAnimal">Manhunting [animalKindDef_label]</customLetterLabel>
               <customLetterText TKey="LetterTextAngryAnimal">The [animalKindDef_label] which was following [asker_nameFull] has arrived in the area.</customLetterText>
             </node>
@@ -137,7 +136,7 @@
         <li Class="QuestNode_ExtraFaction">
           <pawns>$asker</pawns>
           <factionType>HomeFaction</factionType>
-          <faction>Empire</faction>
+          <faction>Gha_Syndicate</faction>
           <inSignalsRemovePawn>
             <li>lodgers.RanWild</li>
             <li>lodgers.BecameMutant</li>
