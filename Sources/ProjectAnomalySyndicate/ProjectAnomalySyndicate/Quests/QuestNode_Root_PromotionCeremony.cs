@@ -82,36 +82,8 @@ namespace ProjectAnomalySyndicate.Quests
             });
             QuestUtility.AddQuestTag(ref thing.questTags, text);
             QuestUtility.AddQuestTag(ref pawn.questTags, text);
-            List<ThingDef> addItems = new List<ThingDef>();
-            switch (titleAwardedWhenUpdating.defName)
-            {
-                case "Gha_Auxiliary":
-                    addItems.Add(DefOfs.Gha_BuildingDataChip);
-                    break;
-                case "Gha_Operative":
-                    addItems.Add(DefOfs.Gha_WeaponDataChip);
-                    break;
-                case "Gha_Enforcer":
-                    addItems.Add(DefOfs.Gha_ArmorDataChip);
-                    if (ModsConfig.BiotechActive)
-                    {
-                        addItems.Add(ThingDefOf.Mechlink);
-                    }
-                    break;
-                case "Gha_Operations_Lieutenant":
-                    addItems.Add(DefOfs.Gha_SerumDataChip);
-                    break;
-                case "Gha_Field_Analyst":
-                    addItems.Add(DefOfs.Gha_MechanoidDataChip);
-                    if (ModsConfig.BiotechActive)
-                    {
-                        addItems.Add(ThingDefOf.Mechlink);
-                    }
-                    break;
-                default:
-                    break;
-
-            }
+            List<ThingDef> addItems = SyndicateUtility.GetBonusItemsBasedOnRank(titleAwardedWhenUpdating.defName);
+            
             ThingOwner<Thing> innerContainer = pawn2.inventory.innerContainer;
             for (int num = innerContainer.Count - 1; num >= 0; num--)
             {
@@ -220,11 +192,9 @@ namespace ProjectAnomalySyndicate.Quests
                 awardingFaction = bestowingFaction,
                 givePsylink = (titleAwardedWhenUpdating.maxPsylinkLevel > pawn.GetPsylinkLevel()),
                 royalTitle = titleAwardedWhenUpdating,
-                thingsToGenerate = addItems
-            }, new Reward_Items{
-
-                items = itemsReward
-            } }
+                bonusItems = addItems
+                
+            }   }
             };
             questPart_Choice.choices.Add(item2);
             List<Rule> list3 = new List<Rule>();

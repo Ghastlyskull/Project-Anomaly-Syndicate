@@ -16,8 +16,7 @@ namespace ProjectAnomalySyndicate
     {
         private static readonly Texture2D IconPsylink = ContentFinder<Texture2D>.Get("Things/Item/Special/PsylinkNeuroformer");
 
-        public List<Thing> items;
-        public List<ThingDef> thingsToGenerate;
+        public List<ThingDef> bonusItems;
         public override IEnumerable<GenUI.AnonymousStackElement> StackElements
         {
             get
@@ -37,7 +36,7 @@ namespace ProjectAnomalySyndicate
                         Find.WindowStack.Add(new Dialog_InfoCard(royalTitle, awardingFaction));
                     }
                 });
-                foreach (ThingDef item in thingsToGenerate)
+                foreach (ThingDef item in bonusItems)
                 {
                     yield return QuestPartUtility.GetStandardRewardStackElement(item.LabelCap, item.uiIcon, () => item.description, delegate
                     {

@@ -11,6 +11,7 @@
     <RootNamespace>ProjectAnomalySyndicate</RootNamespace>
     <AssemblyName>ProjectAnomalySyndicate</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <LangVersion>8.0</LangVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
@@ -70,6 +71,7 @@
     <Compile Include="HarmonyPatches\DevourerAbortDigestionSpitbanePatch.cs" />
     <Compile Include="HarmonyPatches\GenerateBestowingCeremonyQuestPatch.cs" />
     <Compile Include="HarmonyPatches\HypnosisResistancePatches.cs" />
+    <Compile Include="HarmonyPatches\RitualOutcomeBestowingPatch.cs" />
     <Compile Include="HarmonyPatches\WillingToTradeAnomaliesPatch.cs" />
     <Compile Include="HarmonyPatches\WorkGhoulpatches.cs" />
     <Compile Include="HypnosisResistanceModExtension.cs" />
@@ -90,6 +92,7 @@
     <Compile Include="Quests\QuestsIncidentWorker_FleshbeastsAttackWalkin.cs" />
     <Compile Include="Reward_BestowingCeremonySyndicate.cs" />
     <Compile Include="StockGenerator_BuyAnomalies.cs" />
+    <Compile Include="SyndicateUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
