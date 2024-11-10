@@ -23,7 +23,11 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
             if (jobRitual is LordJob_BestowingCeremony { target: { } target, bestower: { } bestower } && bestower.Faction.def == DefOfs.Gha_Syndicate)
             {
                 List<ThingDef> list = SyndicateUtility.GetBonusItemsBasedOnRank(target.royalty.GetCurrentTitleInFaction(bestower.Faction).def.defName);
-                target.Map.SendBonusItems(list, bestower.Position);
+                if(list.Count > 0)
+                {
+                    target.Map.SendBonusItems(list, bestower.Position);
+                }
+                
             }
         }
     }
