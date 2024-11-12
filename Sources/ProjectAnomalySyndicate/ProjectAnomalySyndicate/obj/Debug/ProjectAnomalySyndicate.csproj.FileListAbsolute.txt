@@ -80,5 +80,4 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Project-Anomaly-Synd
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Project-Anomaly-Syndicate-Quests\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.pdb
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Project-Anomaly-Syndicate-Quests\Assemblies\ProjectAnomalySyndicate.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Project-Anomaly-Syndicate-Quests\Assemblies\ProjectAnomalySyndicate.pdb
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Project-Anomaly-Syndicate-Quests\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.csproj.CopyComplete
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Project-Anomaly-Syndicate-Quests\Sources\ProjectAnomalySyndicate\ProjectAnomalySyndicate\obj\Debug\ProjectAnomalySyndicate.dll

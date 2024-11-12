@@ -57,9 +57,11 @@
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +70,9 @@
     <Compile Include="CompMindWake.cs" />
     <Compile Include="CompProperties_MindWake.cs" />
     <Compile Include="CompTargetEffect_Mindwake.cs" />
+    <Compile Include="Generation\GenStep_DamageWalls.cs" />
+    <Compile Include="Generation\GenStep_DestroyDoors.cs" />
+    <Compile Include="Generation\SitePartWorker_AnomalyExtermination.cs" />
     <Compile Include="HarmonyPatches\DevourerAbortDigestionSpitbanePatch.cs" />
     <Compile Include="HarmonyPatches\GenerateBestowingCeremonyQuestPatch.cs" />
     <Compile Include="HarmonyPatches\HypnosisResistancePatches.cs" />
@@ -88,7 +93,9 @@
     <Compile Include="Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quests\QuestNode_Fingerspike.cs" />
+    <Compile Include="Quests\QuestNode_GetLeaderOfFaction.cs" />
     <Compile Include="Quests\QuestNode_Root_PromotionCeremony.cs" />
+    <Compile Include="Quests\QuestNode_GetFactionFromDefName.cs" />
     <Compile Include="Quests\QuestsIncidentWorker_FleshbeastsAttackWalkin.cs" />
     <Compile Include="Reward_BestowingCeremonySyndicate.cs" />
     <Compile Include="StockGenerator_BuyAnomalies.cs" />
