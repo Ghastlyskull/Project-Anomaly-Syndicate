@@ -7,7 +7,6 @@
     <rootMinPoints>350</rootMinPoints>
     <canGiveRoyalFavor>true</canGiveRoyalFavor>
     <expireDaysRange>4~8</expireDaysRange>
-    <successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">Raided_BanditCamp</successHistoryEvent>
     <questNameRules>
       <rulesStrings>
         <li>questName->The [anomaly] [gathering]</li>
@@ -26,7 +25,7 @@
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription->[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. A large gathering of [siteFaction_pawnsPlural] has been detected in a nearby location, posing a significant threat to stability in the area. The gathering is believed to be controlled by [siteFaction_name].\n\n[asker_label] is requesting that we exterminate the threat by eliminating all the Dark Entities inside the site. [asker_label] cautions that [sitePart0_description], and advises that specialized equipment may be necessary to survive the encounter.</li>
+        <li>questDescription->[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. A gathering of entities has been detected in a nearby location, posing a significant threat to stability in the area. \n\n[asker_label] is requesting that we exterminate the threat by eliminating all the Dark Entities inside the site. [asker_label] advises that specialized equipment may be necessary to survive the encounter.</li>
       </rulesStrings>
     </questDescriptionRules>
     <root Class="QuestNode_Sequence">
@@ -104,7 +103,7 @@
             <nodes>
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
-                <text TKey="LetterTextQuestExpired">The bandit camp has packed up and moved on. The quest [resolvedQuestName] has expired.</text>
+                <text TKey="LetterTextQuestExpired">The gathering of entities has dissapeared. The quest [resolvedQuestName] has expired.</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>
@@ -120,7 +119,7 @@
             <nodes>
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelQuestFailed">Quest failed: [resolvedQuestName]</label>
-                <text TKey="LetterTextQuestFailed">After being discovered, the bandit camp has dispersed. The quest [resolvedQuestName] has ended.</text>
+                <text TKey="LetterTextQuestFailed">After being discovered, the gathering of entities has dissapeared. The quest [resolvedQuestName] has ended.</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>
@@ -144,7 +143,7 @@
                 </parms>
                 <addCampLootReward>true</addCampLootReward>
                 <customLetterLabel TKey="LetterLabelPaymentArrived">Payment arrived</customLetterLabel>
-                <customLetterText TKey="LetterTextPaymentArrived">You have defeated the bandit camp!\n\nThe payment from [asker_faction_name] has arrived.</customLetterText>
+                <customLetterText TKey="LetterTextPaymentArrived">You have defeated the entities!\n\nThe payment from [asker_faction_name] has arrived.</customLetterText>
                 <nodeIfChosenPawnSignalUsed Class="QuestNode_Letter">
                   <letterDef>ChoosePawn</letterDef>
                   <label TKey="LetterLabelFavorReceiver">[asker_faction_royalFavorLabel]</label>

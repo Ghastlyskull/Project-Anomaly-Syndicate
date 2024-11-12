@@ -28,16 +28,20 @@ namespace ProjectAnomalySyndicate.Generation
         public override void PostMapGenerate(Map map)
         {
             Site site = map.Parent as Site;
-
-            float num = Math.Max(Faction.OfEntities.def.MinPointsToGeneratePawnGroup(PawnGroupKindDefOf.Chimeras), site.ActualThreatPoints);
-
+            PawnGroupKindDef pawnGroup = SyndicateUtility.GetAnomaliesBasedOnMonolithLevel().RandomElement();
+            float num = Math.Max(Faction.OfEntities.def.MinPointsToGeneratePawnGroup(pawnGroup), site.ActualThreatPoints);
             List<Pawn> entities = PawnGroupMakerUtility.GeneratePawns(new PawnGroupMakerParms
             {
-                groupKind = PawnGroupKindDefOf.Chimeras,
+                groupKind = pawnGroup,
                 points = num,
                 faction = Faction.OfEntities
             }).ToList();
             DistressCallUtility.SpawnPawns(map, entities, map.Center, 20);
+            if(Find.Anomaly.Level >= 1 && pawnGroup == PawnGroupKindDefOf.Shamblers)
+            {
+                GameCondition cond = GameConditionMaker.MakeConditionPermanent(GameConditionDefOf.DeathPall);
+                map.gameConditionManager.RegisterCondition(cond);
+            }
             foreach (Thing allThing in map.listerThings.AllThings)
             {
                 if (allThing.def.category == ThingCategory.Item)

@@ -10,6 +10,22 @@ namespace ProjectAnomalySyndicate
 {
     public static class SyndicateUtility
     {
+
+        public static List<PawnGroupKindDef> GetAnomaliesBasedOnMonolithLevel()
+        {
+            List<PawnGroupKindDef> list = new List<PawnGroupKindDef>() { PawnGroupKindDefOf.Shamblers };
+            int num = Find.Anomaly.Level;
+            if(num >= 1)
+            {
+                list.Add(PawnGroupKindDefOf.Gorehulks);
+                list.Add(PawnGroupKindDefOf.Metalhorrors);
+                list.Add(PawnGroupKindDefOf.Chimeras);
+                list.Add(PawnGroupKindDefOf.Devourers);
+                list.Add(PawnGroupKindDefOf.Fleshbeasts);
+                list.Add(PawnGroupKindDefOf.Sightstealers);
+            }
+            return list;
+        }
         public static List<ThingDef> GetBonusItemsBasedOnRank(string rank)
         {
             List<ThingDef> addItems = new List<ThingDef>();
