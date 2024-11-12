@@ -71,7 +71,7 @@
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <!--Change the part effected to whole-->
-          <li>Brain</li>
+          <li>Torso</li>
         </appliedOnFixedBodyParts>
         <addsHediff>Spitbane</addsHediff>
     </RecipeDef>
@@ -156,4 +156,80 @@
         </appliedOnFixedBodyParts>
         <addsHediff>CerebralFortifier</addsHediff>
       </RecipeDef>
+
+      <!--Mindlock (Ghoul implant)-->
+    <HediffDef ParentName="ImplantHediffBase">
+      <defName>Mindlock</defName>
+      <label>mindlock implant</label>
+      <labelNoun>a mindlock implant</labelNoun>
+      <description>An installed neurocalculator. A non-intelligent microcomputer controlled by a visual/tactile neural interface. It assists with memory and calculation, like a calculator and notepad embedded in the brain.</description>
+      <descriptionHyperlinks><ThingDef>Mindlock</ThingDef></descriptionHyperlinks>
+      <spawnThingOnRemoved>Mindlock</spawnThingOnRemoved>
+      <comps>
+        <li Class="HediffCompProperties_ReactOnDamage">
+          <damageDefIncoming>EMP</damageDefIncoming>
+          <createHediff>BrainShock</createHediff>
+        </li>
+
+        <li Class="ProjectAnomalySyndicate.CompProperties_MindWake"/>
+      </comps>
+    </HediffDef>
+  
+    <ThingDef ParentName="BodyPartGhoulBase">
+      <defName>Mindlock</defName>
+      <label>mindlock implant</label>
+      <description>A non-intelligent microcomputer controlled by a visual/tactile neural interface. It assists with memory and calculation, like a calculator and notepad embedded in the brain.</description>
+      <descriptionHyperlinks><RecipeDef>InstallMindlock</RecipeDef></descriptionHyperlinks>
+      <graphicData>
+        <texPath>Things/Item/Health/HealthItem</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>0.80</drawSize>
+        <color>(189,169,118)</color>
+      </graphicData>
+      <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+      <costList>
+        <Plasteel>15</Plasteel>
+        <ComponentSpacer>4</ComponentSpacer>
+      </costList>
+      <recipeMaker>
+          <!--Make new research for implants-->
+        <researchPrerequisite>Gha_Research_Anomaly_BionicCountermeasures</researchPrerequisite>
+      </recipeMaker>
+    </ThingDef>
+  
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+      <defName>InstallMindlock</defName>
+      <label>install mindlock</label>
+      <description>Install mindlock implant.</description>
+      <descriptionHyperlinks>
+        <ThingDef>Mindlock</ThingDef>
+        <HediffDef>Mindlock</HediffDef>
+      </descriptionHyperlinks>
+      <jobString>Installing mindlock implant.</jobString>
+      <skillRequirements Inherit="false" />
+      <anesthetize>false</anesthetize>
+      <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+      <mutantPrerequisite>
+        <li>Ghoul</li>
+      </mutantPrerequisite>
+      <ingredients Inherit="false">
+        <li>
+          <filter>
+            <thingDefs>
+              <li>Mindlock</li>
+            </thingDefs>
+          </filter>
+          <count>1</count>
+        </li>
+      </ingredients>
+      <fixedIngredientFilter>
+        <thingDefs>
+          <li>Mindlock</li>
+        </thingDefs>
+      </fixedIngredientFilter>
+      <appliedOnFixedBodyParts>
+        <li>Brain</li>
+      </appliedOnFixedBodyParts>
+      <addsHediff>Mindlock</addsHediff>
+    </RecipeDef>
 </Defs>

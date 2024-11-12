@@ -263,4 +263,103 @@
           <li>RewardStandardHighFreq</li>
         </thingSetMakerTags>
       </ThingDef>
+      <!--Synapse Armor-->
+      <ThingDef ParentName="ApparelArmorReconBase">
+        <defName>Gha_Apparel_ArmorSynapse</defName>
+        <label>synapse armor</label>
+        <description>A suit of light partially-powered armor, designed to permit quick movement. Plasteel-weave plates block attacks without compromising mobility, and neuro-memetic assistors in the lower body allow a human to wear the armor and still move easily.\n\nExpensive and beautiful, prestige armor like this is usually made for those of high status. Embedded eltex threads also enhance the wearer's psychic sensitivity.</description>
+        <graphicData>
+          <texPath>Things/Pawn/Apparel/Synapse_Armor/Synapse_Armor</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+          <WorkToMake>90000</WorkToMake>
+          <MaxHitPoints>280</MaxHitPoints>
+          <Flammability>0.4</Flammability>
+          <ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.46</ArmorRating_Heat>
+          <Insulation_Cold>32</Insulation_Cold>
+          <Insulation_Heat>9</Insulation_Heat>
+          <EquipDelay>11</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+          <PsychicSensitivity>0.05</PsychicSensitivity>
+          <PsychicEntropyRecoveryRate>0.033</PsychicEntropyRecoveryRate>
+        </equippedStatOffsets>
+        <costList>
+          <Gold>9</Gold>
+          <Plasteel>100</Plasteel>
+        </costList>
+        <apparel>
+          <tags>
+            <li>PrestigeCombatGear</li>
+          </tags>
+          <wornGraphicPath>Things/Pawn/Apparel/Synapse_Armor/Synapse_Armor</wornGraphicPath>
+        </apparel>
+        <recipeMaker>
+          <displayPriority>145</displayPriority>
+          <researchPrerequisite>Gha_Research_Synapse_Armor</researchPrerequisite>
+        </recipeMaker>
+        <comps>
+          <li Class="CompProperties_Biocodable"/>
+        </comps>
+        <modExtensions>
+          <li Class="ProjectAnomalySyndicate.BloodRainResistanceModExtension">
+            <bloodRainResistance>0.5</bloodRainResistance> 
+          </li>
+        </modExtensions>
+      </ThingDef>
+    
+      <ThingDef ParentName="ApparelArmorHelmetReconBase">
+        <defName>Gha_Apparel_ArmorSynapseHelmet</defName>
+        <label>synapse helmet</label>
+        <description>A high-tech armored helmet with a built-in status computer and a protective plasteel-weave plate.\n\nExpensive and beautiful, prestige armor like this is usually made for those of high status. Embedded eltex threads also enhance the wearer's psychic sensitivity.</description>
+        <graphicData>
+          <texPath>Things/Pawn/Apparel/Synapse_Armor_Helmet/Synapse_Helm</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <drawSize>(0.9, 0.9)</drawSize>
+        </graphicData>
+        <statBases>
+          <WorkToMake>31500</WorkToMake>
+        </statBases>
+        <equippedStatOffsets>
+          <PsychicSensitivity>0.05</PsychicSensitivity>
+          <PsychicEntropyRecoveryRate>0.033</PsychicEntropyRecoveryRate>
+        </equippedStatOffsets>
+        <costList>
+          <Gold>4</Gold>
+          <Plasteel>40</Plasteel>
+        </costList>
+        <apparel>
+          <tags>
+            <li>PrestigeCombatGear</li>
+          </tags>
+          <wornGraphicPath>Things/Pawn/Apparel/Synapse_Armor_Helmet/Synapse_Helm</wornGraphicPath>
+          <forceEyesVisibleForRotations>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </forceEyesVisibleForRotations>
+        </apparel>
+        <tradeTags>
+          <li>Armor</li>
+        </tradeTags>
+        <recipeMaker>
+          <displayPriority>140</displayPriority>
+          <researchPrerequisite>Gha_Research_Synapse_Armor</researchPrerequisite>
+        </recipeMaker>
+        <comps>
+          <li Class="CompProperties_Biocodable"/>
+        </comps>
+        <modExtensions>
+          <li Class="ProjectAnomalySyndicate.BloodRainResistanceModExtension">
+            <bloodRainResistance>0.5</bloodRainResistance> 
+          </li>
+
+          <li Class="ProjectAnomalySyndicate.InvisibilityDisruptorModExtension">
+            <radius>15.9</radius>
+          </li>
+        </modExtensions>
+      </ThingDef>
 </Defs>

@@ -82,7 +82,7 @@
         <label>construction data chip</label>
         <description>A plasteel-polymer storage device which houses an extensive sheet of gold alloy weave, every inch of the substrate is etched with microscopic lines of data which when read correctly can grant your researchers the required information to complete a specific research project.\n\nThis scroll appears to be contain knowledge on complex dwarven constructions and designs, like core drills, dwarven turrets and even automatons.</description>
         <graphicData>
-            <texPath>Things/Item/Special/Gha_DataChip_Weapons</texPath>
+            <texPath>Things/Item/Special/Gha_DataChip_Building</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>
@@ -96,7 +96,7 @@
         </tradeTags>
         <comps>
           <li Class="CompProperties_CompAnalyzableUnlockResearch">
-            <analysisID>40774901</analysisID>
+            <analysisID>40774902</analysisID>
             <requiresMechanitor>false</requiresMechanitor>
     
             <!-- Analyzable -->
@@ -129,10 +129,10 @@
 
       <ThingDef ParentName="DataSlateBase">
         <defName>Gha_SerumDataChip</defName>
-        <label>serum data chip</label>
+        <label>anomaly data chip</label>
         <description>A plasteel-polymer storage device which houses an extensive sheet of gold alloy weave, every inch of the substrate is etched with microscopic lines of data which when read correctly can grant your researchers the required information to complete a specific research project.\n\nThis scroll appears to be contain knowledge on complex dwarven constructions and designs, like core drills, dwarven turrets and even automatons.</description>
         <graphicData>
-            <texPath>Things/Item/Special/Gha_DataChip_Weapons</texPath>
+            <texPath>Things/Item/Special/Gha_DataChip_Serum</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>
@@ -146,7 +146,7 @@
         </tradeTags>
         <comps>
           <li Class="CompProperties_CompAnalyzableUnlockResearch">
-            <analysisID>40774901</analysisID>
+            <analysisID>40774903</analysisID>
             <requiresMechanitor>false</requiresMechanitor>
     
             <!-- Analyzable -->
@@ -182,7 +182,7 @@
         <label>armor data chip</label>
         <description>A plasteel-polymer storage device which houses an extensive sheet of gold alloy weave, every inch of the substrate is etched with microscopic lines of data which when read correctly can grant your researchers the required information to complete a specific research project.\n\nThis scroll appears to be contain knowledge on complex dwarven constructions and designs, like core drills, dwarven turrets and even automatons.</description>
         <graphicData>
-            <texPath>Things/Item/Special/Gha_DataChip_Weapons</texPath>
+            <texPath>Things/Item/Special/Gha_DataChip_Armor</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>
@@ -196,7 +196,7 @@
         </tradeTags>
         <comps>
           <li Class="CompProperties_CompAnalyzableUnlockResearch">
-            <analysisID>40774901</analysisID>
+            <analysisID>40774904</analysisID>
             <requiresMechanitor>false</requiresMechanitor>
     
             <!-- Analyzable -->
@@ -232,7 +232,7 @@
         <label>mechanoid data chip</label>
         <description>A plasteel-polymer storage device which houses an extensive sheet of gold alloy weave, every inch of the substrate is etched with microscopic lines of data which when read correctly can grant your researchers the required information to complete a specific research project.\n\nThis scroll appears to be contain knowledge on complex dwarven constructions and designs, like core drills, dwarven turrets and even automatons.</description>
         <graphicData>
-            <texPath>Things/Item/Special/Gha_DataChip_Weapons</texPath>
+            <texPath>Things/Item/Special/Gha_DataChip_Mechanoid</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>
@@ -246,7 +246,7 @@
         </tradeTags>
         <comps>
           <li Class="CompProperties_CompAnalyzableUnlockResearch">
-            <analysisID>40774901</analysisID>
+            <analysisID>40774905</analysisID>
             <requiresMechanitor>false</requiresMechanitor>
     
             <!-- Analyzable -->
