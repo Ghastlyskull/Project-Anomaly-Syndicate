@@ -25,6 +25,7 @@ namespace ProjectAnomalySyndicate
         public static ThingDef Gha_MechanoidDataChip;
         public static FactionDef Gha_Syndicate;
         public static QuestScriptDef Gha_BestowingCeremony;
+        public static PawnKindDef Devourer;
     }
 
 }

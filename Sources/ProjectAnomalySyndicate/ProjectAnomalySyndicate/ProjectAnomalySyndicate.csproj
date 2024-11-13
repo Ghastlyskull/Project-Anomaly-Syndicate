@@ -93,6 +93,8 @@
     <Compile Include="Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quests\QuestNode_Fingerspike.cs" />
+    <Compile Include="Quests\QuestNode_GetAnomalyCombatPower.cs" />
+    <Compile Include="Quests\QuestNode_GetAnomalyPawnKind.cs" />
     <Compile Include="Quests\QuestNode_GetLeaderOfFaction.cs" />
     <Compile Include="Quests\QuestNode_Root_PromotionCeremony.cs" />
     <Compile Include="Quests\QuestNode_GetFactionFromDefName.cs" />

@@ -28,7 +28,7 @@ namespace ProjectAnomalySyndicate.Generation
         public override void PostMapGenerate(Map map)
         {
             Site site = map.Parent as Site;
-            PawnGroupKindDef pawnGroup = SyndicateUtility.GetAnomaliesBasedOnMonolithLevel().RandomElement();
+            PawnGroupKindDef pawnGroup = SyndicateUtility.GetAnomalyGroupKindDefBasedOnMonolithLevel().RandomElement();
             float num = Math.Max(Faction.OfEntities.def.MinPointsToGeneratePawnGroup(pawnGroup), site.ActualThreatPoints);
             List<Pawn> entities = PawnGroupMakerUtility.GeneratePawns(new PawnGroupMakerParms
             {
