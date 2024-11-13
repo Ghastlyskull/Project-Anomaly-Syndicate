@@ -48,16 +48,21 @@
         <li Class="ProjectAnomalySyndicate.Quests.QuestNode_GetAnomalyPawnKind">
           <storeAs>anomalyPawnKind</storeAs>
         </li>
+        <li Class="ProjectAnomalySyndicate.Quests.QuestNode_GetFactionFromDefName">
+          <storeAs>enemyFaction</storeAs>
+          <defName>Entities</defName>
+        </li>
         <!-- Generate lodger animals -->
-        <li Class="QuestNode_GeneratePawn">
+        <li Class="ProjectAnomalySyndicate.Quests.QuestNode_GeneratePawnSimple">
           <kindDef>$anomalyPawnKind</kindDef>
           <storeAs>anomaly</storeAs>
-          <ensureNonNumericName>true</ensureNonNumericName>
+          <faction>$enemyFaction</faction>
         </li>
         <li Class="QuestNode_PawnsArrive">
           <pawns>$anomaly</pawns>
           <joinPlayer>false</joinPlayer>
         </li>
+
         <li Class="QuestNode_Set">
           <name>shuttleDelayTicks</name>
           <value>$(roundToTicksRough(randInt(5, 25)*60000))</value>
@@ -70,30 +75,33 @@
         <!-- Shuttle -->
         <li Class="QuestNode_ShuttleDelay">
           <delayTicks>$shuttleDelayTicks</delayTicks>
-          <lodgers>
-            <li>$anomaly</li>
-          </lodgers>
+          <lodgers>$anomaly</lodgers>
           <node Class="QuestNode_Sequence">
             <nodes>
+              <li Class="ProjectAnomalySyndicate.Quests.QuestNode_GetHediffFromDefName">
+                <defName>Anesthetic</defName>
+                <storeAs>hediff</storeAs>
+              </li>
+
               <li Class="QuestNode_SubScript">
                 <def>Util_TransportShip_Pickup</def>
                 <parms>
                   <leaveDelayTicks>$shuttleLeaveDelayTicks</leaveDelayTicks>
-                  <requiredPawns>
-                    <li>$anomaly</li>
-                  </requiredPawns>
-                  <sendAwayIfAllDespawned>
-                    <li>$anomaly</li>
-                  </sendAwayIfAllDespawned>
+                  <requiredPawns>$anomaly</requiredPawns>
+                  <sendAwayIfAllDespawned>$anomaly</sendAwayIfAllDespawned>
                 </parms>
               </li>
 
               <li Class="QuestNode_SendSignals">
                 <outSignals>ShuttleArrived</outSignals>
               </li>
-
+              <li Class="QuestNode_AddHediff">
+                <pawns>$anomaly</pawns>
+                <inSignal>ShuttleArrived</inSignal>
+                <hediffDef>$hediff</hediffDef>
+              </li>
               <li Class="QuestNode_InspectString">
-                <targets>$lodgers</targets>
+                <targets>$anomaly</targets>
                 <inspectString TKey="InspectStringDepartShuttle">Should depart on shuttle</inspectString>
               </li>
               <li Class="QuestNode_Letter">
@@ -131,7 +139,7 @@
           <name>rewardValue</name>
           <value>$($anomalyRewardFromCountAndDelay * 25)</value>
         </li>
-        
+
         <!-- - - - - - - -  -->
         <!-- End conditions -->
         <!-- - - - - - - -  -->
