@@ -7,7 +7,7 @@
         <description>A mixture of deadlife dust and advanced biochemicals course through this creature’s veins.</description>
         <comps>
           <li Class="HediffCompProperties_Disappears">
-            <disappearsAfterTicks>10000~15000</disappearsAfterTicks> <!-- 4 ~ 6 hours -->
+            <disappearsAfterTicks>180000~195000</disappearsAfterTicks> <!-- 3 days ~ 3 days and 2 hours -->
             <showRemainingTime>true</showRemainingTime>
           </li>
           <li Class="ProjectAnomalySyndicate.CompProperties_MindWake"/>
