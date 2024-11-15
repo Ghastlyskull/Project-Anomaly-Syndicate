@@ -77,6 +77,7 @@
     <Compile Include="HarmonyPatches\GenerateBestowingCeremonyQuestPatch.cs" />
     <Compile Include="HarmonyPatches\HypnosisResistancePatches.cs" />
     <Compile Include="HarmonyPatches\RitualOutcomeBestowingPatch.cs" />
+    <Compile Include="HarmonyPatches\TransferEntityToTransporterPatch.cs" />
     <Compile Include="HarmonyPatches\WillingToTradeAnomaliesPatch.cs" />
     <Compile Include="HarmonyPatches\WorkGhoulpatches.cs" />
     <Compile Include="HypnosisResistanceModExtension.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="HarmonyPatches\HediffCompInvisibilityForcedVisiblePatch.cs" />
     <Compile Include="HarmonyPatches\ObeliskActivitySupressedInspectStringPatch.cs" />
     <Compile Include="IncidentWorker_SyndicateTributeCollector.cs" />
+    <Compile Include="JobDriver_TransferEntityToTransporter.cs" />
     <Compile Include="JobDriver_UseMindwake.cs" />
     <Compile Include="Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

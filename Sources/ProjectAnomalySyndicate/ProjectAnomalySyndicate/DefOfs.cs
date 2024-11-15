@@ -26,6 +26,7 @@ namespace ProjectAnomalySyndicate
         public static FactionDef Gha_Syndicate;
         public static QuestScriptDef Gha_BestowingCeremony;
         public static PawnKindDef Devourer;
+        public static JobDef TransferEntityToTransporter;
     }
 
 }

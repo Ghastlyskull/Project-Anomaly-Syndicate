@@ -8,5 +8,11 @@
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
 
   </JobDef>
-  
+  <JobDef>
+    <defName>TransferEntityToTransporter</defName>
+    <driverClass>ProjectAnomalySyndicate.JobDriver_TransferEntityToTransporter</driverClass>
+    <reportString>transporting entity to shuttle.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+
+  </JobDef>
 </Defs>
