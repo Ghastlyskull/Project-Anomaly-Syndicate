@@ -21,7 +21,12 @@
       </rulesStrings>
     </questNameRules>
     <questDescriptionRules>
-      <rulesStrings>[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. An entity has been tagged for capture by the [asker_faction_name], however they need time prepare the entity's platform. \n\n[asker_label] is requesting that we capture the entity and hold onto it until they are ready to contain the anomaly. [asker_label] advises that specialized equipment may be necessary to capture.</rulesStrings>
+      <include>
+        <li>QuestHospitalityCommon</li>
+      </include>
+      <rulesStrings>
+        <li>questDescription->[asker_nameFull], a [asker_royalTitleInCurrentFaction] of [asker_faction_name], has sent us a message. An entity has been tagged for capture by the [asker_faction_name], however they need time prepare the entity's platform.\n\n[asker_label] is requesting that we capture the entity and hold onto it until they are ready to contain the anomaly. [asker_label] advises that specialized equipment may be necessary to capture.</li>
+      </rulesStrings>
     </questDescriptionRules>
     <root Class="QuestNode_Sequence">
       <nodes>
@@ -100,7 +105,7 @@
               </li>
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelShuttleArrived">Shuttle arrived</label>
-                <text TKey="LetterTextShuttleArrived">The shuttle has arrived to collect [lodgersLabelSingOrPluralDef]. Be sure to have these people on the shuttle before it leaves in [shuttleLeaveDelayTicks_duration]:\n\n[lodgers]</text>
+                <text TKey="LetterTextShuttleArrived">The shuttle has arrived to collect the entity. Be sure to have it on the shuttle before it leaves in [shuttleLeaveDelayTicks_duration]</text>
                 <lookTargets>$pickupShipThing</lookTargets>
               </li>
             </nodes>
@@ -145,7 +150,7 @@
             <nodes>
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelGuestDied">Entity killed: {SUBJECT_definite}</label>
-                <text TKey="LetterTextGuestDied">[letterSubject], who you were charged to capture, has died. [remainingWillNowLeave][failLetterEndingCommon]</text>
+                <text TKey="LetterTextGuestDied">Entity that you were charged to capture, has died. [failLetterEndingCommon]</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>
@@ -166,7 +171,7 @@
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelGuestLost">Entity lost: {SUBJECT_definite}</label>
                 <letterDef>NegativeEvent</letterDef>
-                <text TKey="LetterTextGuestLost">[letterSubject], who you were charged to capture, is gone. [remainingWillNowLeave][failLetterEndingCommon]</text>
+                <text TKey="LetterTextGuestLost">Entity that you were charged to capture, is gone. [failLetterEndingCommon]</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>
@@ -186,7 +191,7 @@
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelShuttleDestroyed">Shuttle destroyed</label>
                 <letterDef>NegativeEvent</letterDef>
-                <text TKey="LetterTextShuttleDestroyed">The shuttle sent to collect [lodgersLabelSingOrPluralDef] has been destroyed. [lodgersLabelSingOrPluralDef] will now leave on foot. [failLetterEndingCommon]</text>
+                <text TKey="LetterTextShuttleDestroyed">The shuttle sent to collect the entity has been destroyed. [failLetterEndingCommon]</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>
@@ -226,13 +231,13 @@
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelQuestFailed">Quest failed: [resolvedQuestName]</label>
                 <letterDef>NegativeEvent</letterDef>
-                <text TKey="LetterTextQuestFailed">The shuttle sent to collect [lodgersLabelSingOrPluralDef] has departed. [lodgersLabelSingOrPluralDef] will now leave on foot. [failLetterEndingCommon]</text>
+                <text TKey="LetterTextQuestFailed">The shuttle sent to collect the entity has departed. [failLetterEndingCommon]</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>
                 <goodwillChangeAmount>-5</goodwillChangeAmount>
                 <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
-                <goodwillChangeReason>MemberMissedShuttle</goodwillChangeReason>
+                <goodwillChangeReason>AnomalyMissedShuttle</goodwillChangeReason>
               </li>
             </nodes>
           </node>
