@@ -9,24 +9,19 @@
     <expireDaysRange>4~8</expireDaysRange>
     <questNameRules>
       <rulesStrings>
-        <li>questName->The [anomaly] [gathering]</li>
-        <li>questName->[anomaly] [gathering]</li>
-        <li>questName->[asker_nameDef] and the [gathering]</li>
-        <li>gathering->Gathering</li>
-        <li>gathering->Infestation</li>
-        <li>gathering->Convergence</li>
-        <li>gathering->Horde</li>
-        <li>gathering->Swarm</li>
+        <li>questName->The [anomaly] [containment]</li>
+        <li>questName->[anomaly] [containment]</li>
+        <li>questName->[asker_nameDef]'s [containment]</li>
+        <li>containment->Containment</li>
+        <li>containment->Capture</li>
+        <li>containment->Seizure</li>
         <li>anomaly->Dark Entity</li>
         <li>anomaly->Voidborn</li>
         <li>anomaly->Aberration</li>
-        <li>anomaly->Disturbance</li>
       </rulesStrings>
     </questNameRules>
     <questDescriptionRules>
-      <rulesStrings>
-        <li>questDescription->[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. A gathering of entities has been detected in a nearby location, posing a significant threat to stability in the area. \n\n[asker_label] is requesting that we exterminate the threat by eliminating all the Dark Entities inside the site. [asker_label] advises that specialized equipment may be necessary to survive the encounter.</li>
-      </rulesStrings>
+      <rulesStrings>[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. An entity has been tagged for capture by the [asker_faction_name], however they need time prepare the entity's platform. \n\n[asker_label] is requesting that we capture the entity and hold onto it until they are ready to contain the anomaly. [asker_label] advises that specialized equipment may be necessary to capture.</rulesStrings>
     </questDescriptionRules>
     <root Class="QuestNode_Sequence">
       <nodes>
@@ -62,7 +57,10 @@
           <pawns>$anomaly</pawns>
           <joinPlayer>false</joinPlayer>
         </li>
-
+        <li Class="QuestNode_AssaultColony">
+          <pawns>$anomaly</pawns>
+          <faction>$enemyFaction</faction>
+        </li>
         <li Class="QuestNode_Set">
           <name>shuttleDelayTicks</name>
           <value>$(roundToTicksRough(randInt(5, 25)*60000))</value>
@@ -89,16 +87,12 @@
                   <leaveDelayTicks>$shuttleLeaveDelayTicks</leaveDelayTicks>
                   <requiredPawns>$anomaly</requiredPawns>
                   <sendAwayIfAllDespawned>$anomaly</sendAwayIfAllDespawned>
+                  <leaveImmediatelyWhenSatisfied>true</leaveImmediatelyWhenSatisfied>
                 </parms>
               </li>
 
               <li Class="QuestNode_SendSignals">
                 <outSignals>ShuttleArrived</outSignals>
-              </li>
-              <li Class="QuestNode_AddHediff">
-                <pawns>$anomaly</pawns>
-                <inSignal>ShuttleArrived</inSignal>
-                <hediffDef>$hediff</hediffDef>
               </li>
               <li Class="QuestNode_InspectString">
                 <targets>$anomaly</targets>
@@ -150,8 +144,8 @@
           <node Class="QuestNode_Sequence">
             <nodes>
               <li Class="QuestNode_Letter">
-                <label TKey="LetterLabelGuestDied">Guest died: {SUBJECT_definite}</label>
-                <text TKey="LetterTextGuestDied">[letterSubject], who you were charged to protect, has died. [remainingWillNowLeave][failLetterEndingCommon]</text>
+                <label TKey="LetterLabelGuestDied">Entity killed: {SUBJECT_definite}</label>
+                <text TKey="LetterTextGuestDied">[letterSubject], who you were charged to capture, has died. [remainingWillNowLeave][failLetterEndingCommon]</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>
@@ -170,9 +164,9 @@
           <node Class="QuestNode_Sequence">
             <nodes>
               <li Class="QuestNode_Letter">
-                <label TKey="LetterLabelGuestLost">Guest lost: {SUBJECT_definite}</label>
+                <label TKey="LetterLabelGuestLost">Entity lost: {SUBJECT_definite}</label>
                 <letterDef>NegativeEvent</letterDef>
-                <text TKey="LetterTextGuestLost">[letterSubject], who you were charged to protect, is gone. [remainingWillNowLeave][failLetterEndingCommon]</text>
+                <text TKey="LetterTextGuestLost">[letterSubject], who you were charged to capture, is gone. [remainingWillNowLeave][failLetterEndingCommon]</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>

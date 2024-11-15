@@ -22,6 +22,7 @@ namespace ProjectAnomalySyndicate
                 list.Add(PawnKindDefOf.Chimera);
                 list.Add(DefOfs.Devourer);
                 list.Add(PawnKindDefOf.Sightstealer);
+                list.Add(PawnKindDefOf.Ghoul);
             }
             return list;
         }
