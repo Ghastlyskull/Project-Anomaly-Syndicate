@@ -28,7 +28,7 @@
         <li>questDescription->[asker_nameFull], a [asker_royalTitleInCurrentFaction] of [asker_faction_name], has sent us a message. An entity has been tagged for capture by the [asker_faction_name], however they need time prepare the entity's platform.\n\n[asker_label] is requesting that we capture the entity and hold onto it until they are ready to contain the anomaly. [asker_label] advises that specialized equipment may be necessary to capture.</li>
       </rulesStrings>
     </questDescriptionRules>
-    <root Class="QuestNode_Sequence">
+    <root Class="ProjectAnomalySyndicate.Quests.QuestNode_AnomalyCheckSequence">
       <nodes>
         <li Class="QuestNode_SubScript">
           <def>Util_RandomizePointsChallengeRating</def>
