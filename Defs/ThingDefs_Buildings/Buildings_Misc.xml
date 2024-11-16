@@ -3,7 +3,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>Gha_ObeliskSuppressor</defName>
     <label>obelisk suppressor</label>
-    <description>Obelisk suppressor description.</description>
+    <description>A powerful piece of psychic suppression technology, the Obelisk Suppressor was designed to counteract the influence of Horax obelisks. This intricate device channels a controlled psionic field through twin energy conduits, it emits a low-frequency hum that actively suppresses the obelisks from activating</description>
     <tickerType>Normal</tickerType>
     <size>(2,2)</size>
     <graphicData>
