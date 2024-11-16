@@ -2,6 +2,7 @@
 using RimWorld.BaseGen;
 using RimWorld.Planet;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,7 @@ namespace ProjectAnomalySyndicate.Generation
             List<Pawn> cultists = new List<Pawn>() { PawnGenerator.GeneratePawn(DefOfs.Horaxian_Highthrall, Faction.OfHoraxCult), PawnGenerator.GeneratePawn(DefOfs.Horaxian_Underthrall, Faction.OfHoraxCult), PawnGenerator.GeneratePawn(DefOfs.Horaxian_Underthrall, Faction.OfHoraxCult) };
             PawnGroupKindDef pawnGroup = SyndicateUtility.GetAnomalyGroupKindDefBasedOnMonolithLevel().RandomElement();
             float num = 265f - site.ActualThreatPoints;
-            if(num >= Faction.OfEntities.def.MinPointsToGeneratePawnGroup(pawnGroup)){
+            if(num >= Faction.OfHoraxCult.def.MinPointsToGeneratePawnGroup(pawnGroup)){
 
                 cultists.Concat(PawnGroupMakerUtility.GeneratePawns(new PawnGroupMakerParms
                 {
@@ -41,7 +42,7 @@ namespace ProjectAnomalySyndicate.Generation
                 }).ToList());
             }
             DistressCallUtility.SpawnPawns(map, cultists, map.Center, 20);
-           
+            Lord lord = LordMaker.MakeNewLord(Faction.OfHoraxCult, new LordJob_DefendBase(Faction.OfHoraxCult, map.Center), map, cultists);
             foreach (Thing allThing in map.listerThings.AllThings)
             {
                 if (allThing.def.category == ThingCategory.Item)
