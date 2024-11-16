@@ -72,6 +72,7 @@
     <Compile Include="CompTargetEffect_Mindwake.cs" />
     <Compile Include="Generation\GenStep_DamageWalls.cs" />
     <Compile Include="Generation\GenStep_DestroyDoors.cs" />
+    <Compile Include="Generation\SitePartWorker_CultExtermination.cs" />
     <Compile Include="Generation\SitePartWorker_AnomalyExtermination.cs" />
     <Compile Include="HarmonyPatches\DevourerAbortDigestionSpitbanePatch.cs" />
     <Compile Include="HarmonyPatches\GenerateBestowingCeremonyQuestPatch.cs" />
