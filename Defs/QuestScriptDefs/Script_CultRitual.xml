@@ -6,7 +6,7 @@
     <rootSelectionWeight>1.0</rootSelectionWeight>
     <rootMinPoints>500</rootMinPoints>
     <canGiveRoyalFavor>true</canGiveRoyalFavor>
-    <autoAccept>true</autoAccept>
+    <expireDaysRange>4~8</expireDaysRange>
     <questNameRules>
       <rulesStrings>
         <li>questName->The [anomaly] [gathering]</li>
