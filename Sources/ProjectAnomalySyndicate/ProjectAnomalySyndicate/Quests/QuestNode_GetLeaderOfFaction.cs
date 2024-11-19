@@ -23,18 +23,18 @@ namespace ProjectAnomalySyndicate.Quests
 
         protected override bool TestRunInt(Slate slate)
         {
-            Log.Message("Testing");
+            //Log.Message("Testing");
             if (!TryFindFaction(out var faction))
             {
-                Log.Message("Faction not found");
+               // Log.Message("Faction not found");
                 return false;
             }
             if (!TryGetFactionLeader(faction, out var leader))
             {
-                Log.Message("Leader not found");
+                //Log.Message("Leader not found");
                 return false;
             }
-            Log.Message("Faction and leader found");
+            //Log.Message("Faction and leader found");
             return true;
         }
 
@@ -57,8 +57,8 @@ namespace ProjectAnomalySyndicate.Quests
         }
         private bool TryGetFactionLeader(Faction faction, out Pawn pawn)
         {
-            Log.Message(faction.def.label);
-            Log.Message(faction.leader.LabelCap);
+            //Log.Message(faction.def.label);
+            //Log.Message(faction.leader.LabelCap);
             if (faction != null)
             {
                 pawn = faction.leader;

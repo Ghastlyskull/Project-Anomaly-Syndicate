@@ -72,6 +72,7 @@
     <Compile Include="CompTargetEffect_Mindwake.cs" />
     <Compile Include="Generation\GenStep_DamageWalls.cs" />
     <Compile Include="Generation\GenStep_DestroyDoors.cs" />
+    <Compile Include="Generation\SitePartWorker_CultRitual.cs" />
     <Compile Include="Generation\SitePartWorker_CultExtermination.cs" />
     <Compile Include="Generation\SitePartWorker_AnomalyExtermination.cs" />
     <Compile Include="HarmonyPatches\DevourerAbortDigestionSpitbanePatch.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Quests\QuestNode_GeneratePawnSimple.cs" />
     <Compile Include="Quests\QuestNode_GetAnomalyPawnKind.cs" />
     <Compile Include="Quests\QuestNode_GetLeaderOfFaction.cs" />
+    <Compile Include="Quests\QuestNode_HoraxRitualEffect.cs" />
     <Compile Include="Quests\QuestNode_Root_PromotionCeremony.cs" />
     <Compile Include="Quests\QuestNode_GetFactionFromDefName.cs" />
     <Compile Include="Quests\QuestsIncidentWorker_FleshbeastsAttackWalkin.cs" />

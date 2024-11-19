@@ -39,11 +39,11 @@ namespace ProjectAnomalySyndicate.Quests
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
-            Log.Message("Executing");
+            //Log.Message("Executing");
             Map map = (Map)parms.target;
-            Log.Message("Got map");
+            //Log.Message("Got map");
             float num = parms.points;
-            Log.Message("Got points" + num);
+            //Log.Message("Got points" + num);
             List<Pawn> fleshbeastsForPoints = new List<Pawn>();
 
             IntVec3 result = parms.spawnCenter;
@@ -52,9 +52,9 @@ namespace ProjectAnomalySyndicate.Quests
                 return false;
             }
             float num3 = Mathf.Max(num, 50f);
-            Log.Message("Actual points " + num3);
+            //Log.Message("Actual points " + num3);
             fleshbeastsForPoints = FleshbeastUtility.GetFleshbeastsForPoints(num3, map, true);
-            Log.Message("Got fleshbeasts " + fleshbeastsForPoints.Count);
+            //Log.Message("Got fleshbeasts " + fleshbeastsForPoints.Count);
             Rot4 rot = Rot4.FromAngleFlat((map.Center - result).AngleFlat);
             for (int i = 0; i < fleshbeastsForPoints.Count; i++)
             {

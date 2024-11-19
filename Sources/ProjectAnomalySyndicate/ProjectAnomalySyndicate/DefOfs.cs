@@ -29,6 +29,8 @@ namespace ProjectAnomalySyndicate
         public static JobDef TransferEntityToTransporter;
         public static PawnKindDef Horaxian_Highthrall;
         public static PawnKindDef Horaxian_Underthrall;
+        public static IncidentDef BloodRain;
+        public static IncidentDef DeathPall;
     }
 
 }

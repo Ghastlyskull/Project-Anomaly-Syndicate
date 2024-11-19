@@ -2,11 +2,11 @@
 <Defs>
 
   <QuestScriptDef>
-    <defName>Gha_ExterminateCult</defName>
+    <defName>Gha_CultRitual</defName>
     <rootSelectionWeight>1.0</rootSelectionWeight>
-    <rootMinPoints>255</rootMinPoints>
+    <rootMinPoints>500</rootMinPoints>
     <canGiveRoyalFavor>true</canGiveRoyalFavor>
-    <expireDaysRange>4~8</expireDaysRange>
+    <autoAccept>true</autoAccept>
     <questNameRules>
       <rulesStrings>
         <li>questName->The [anomaly] [gathering]</li>
@@ -53,7 +53,7 @@
           <storeAs>sitePartDefs</storeAs>
           <sitePartsTags>
             <li>
-              <tag>CultExtermination</tag>
+              <tag>CultRitual</tag>
             </li>
           </sitePartsTags>
         </li>
@@ -99,7 +99,7 @@
         <li Class="QuestNode_WorldObjectTimeout">
           <worldObject>$site</worldObject>
           <isQuestTimeout>true</isQuestTimeout>
-          <delayTicks>$(randInt(12,28)*60000)</delayTicks>
+          <delayTicks>$(randInt(4,8)*60000)</delayTicks>
           <inSignalDisable>site.MapGenerated</inSignalDisable>
           <destroyOnCleanup>true</destroyOnCleanup>
           <node Class="QuestNode_Sequence">
@@ -108,9 +108,13 @@
                 <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
                 <text TKey="LetterTextQuestExpired">The gathering of entities has dissapeared. The quest [resolvedQuestName] has expired.</text>
               </li>
+              <li Class="ProjectAnomalySyndicate.Quests.QuestNode_HoraxRitualEffect">
+              </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>
               </li>
+
+              
             </nodes>
           </node>
         </li>
@@ -120,6 +124,9 @@
           <inSignal>site.Destroyed</inSignal>
           <node Class="QuestNode_Sequence">
             <nodes>
+              <li Class="ProjectAnomalySyndicate.Quests.QuestNode_HoraxRitualEffect">
+                <inSignal>site.Destroyed</inSignal>
+              </li>
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelQuestFailed">Quest failed: [resolvedQuestName]</label>
                 <text TKey="LetterTextQuestFailed">After being discovered, the gathering of entities has dissapeared. The quest [resolvedQuestName] has ended.</text>
@@ -158,6 +165,7 @@
             </nodes>
           </node>
         </li>
+        
         <li Class="QuestNode_End">
           <inSignal>site.AllEnemiesDefeated</inSignal>
           <outcome>Success</outcome>
