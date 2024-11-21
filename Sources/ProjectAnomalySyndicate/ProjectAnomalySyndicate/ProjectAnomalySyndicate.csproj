@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompNextAncientSite.cs" />
+    <Compile Include="CompProperties_RandomAnomalySpawner.cs" />
     <Compile Include="CompProperties_ChanceBeaconSpawner.cs" />
     <Compile Include="CompProperties_NextAncientSite.cs" />
     <Compile Include="CompProperties_TargetEffectMindwake.cs" />

@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Gha_RandomAnomalySpawner</defName>
+    <label>random anomaly spawner</label>
+    <description>spawn a random anomaly.</description>
+    <size>(1,1)</size>
+    <fillPercent>0.50</fillPercent>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <clearBuildingArea>false</clearBuildingArea>
+    <graphicData>
+      <texPath>Things/Item/Special/corrupt_persona</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <building>
+      <isEdifice>false</isEdifice>
+      <canPlaceOverWall>true</canPlaceOverWall>
+    </building>
+    <comps>
+      <li Class="ProjectAnomalySyndicate.CompProperties_RandomAnomalySpawner"/>
+    </comps>
+  </ThingDef>
   	<ThingDef ParentName="BuildingBase">
 		<defName>Gha_BeaconChance</defName>
 		<label>beacon randomizer</label>

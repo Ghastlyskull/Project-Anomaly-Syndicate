@@ -48,7 +48,7 @@ namespace ProjectAnomalySyndicate.Quests
             Slate slate = QuestGen.slate;
             TryFindFaction(out Faction faction);
             TryGetFactionLeader(faction, out Pawn pawn);
-            Log.Message(pawn.Label); 
+            //Log.Message(pawn.Label); 
             QuestPart_InvolvedFactions questPart_InvolvedFactions = new QuestPart_InvolvedFactions();
             questPart_InvolvedFactions.factions.Add(faction);
             QuestGen.quest.AddPart(questPart_InvolvedFactions);
