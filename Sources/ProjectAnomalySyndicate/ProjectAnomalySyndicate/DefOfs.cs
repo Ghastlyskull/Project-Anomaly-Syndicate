@@ -33,6 +33,7 @@ namespace ProjectAnomalySyndicate
         public static IncidentDef DeathPall;
         public static QuestScriptDef Gha_CrashSite;
         public static QuestScriptDef Gha_AncientSite;
+        public static ThingDef Gha_CrashSiteBeacon;
     }
 
 }

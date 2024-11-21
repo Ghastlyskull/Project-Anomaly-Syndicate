@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  	<ThingDef ParentName="BuildingBase">
+		<defName>Gha_BeaconChance</defName>
+		<label>beacon randomizer</label>
+		<description>spawn a beacon with a chance.</description>
+		<size>(1,1)</size>
+		<fillPercent>0.50</fillPercent>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<clearBuildingArea>false</clearBuildingArea>
+		<graphicData>
+      <texPath>Things/Item/Special/corrupt_persona</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>2000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<building>
+			<isEdifice>false</isEdifice>
+			<canPlaceOverWall>true</canPlaceOverWall>
+		</building>
+		<comps>
+			<li Class="ProjectAnomalySyndicate.CompProperties_ChanceBeaconSpawner">
+        <chance>0.45</chance>
+			</li>
+		</comps>
+	</ThingDef>
   <ThingDef ParentName="BuildingBase">
     <defName>Gha_CommsConsole</defName>
     <label>comms console</label>
