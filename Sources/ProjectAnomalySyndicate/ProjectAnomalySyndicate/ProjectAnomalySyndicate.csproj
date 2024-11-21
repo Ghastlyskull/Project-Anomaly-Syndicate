@@ -65,6 +65,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompNextAncientSite.cs" />
+    <Compile Include="CompProperties_NextAncientSite.cs" />
     <Compile Include="CompProperties_TargetEffectMindwake.cs" />
     <Compile Include="CompTargetable_SingleMutant.cs" />
     <Compile Include="CompMindWake.cs" />
