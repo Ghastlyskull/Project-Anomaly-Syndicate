@@ -29,7 +29,6 @@ namespace ProjectAnomalySyndicate.Generation
         public override void PostMapGenerate(Map map)
         {
             Site site = map.Parent as Site;
-            List<Pawn> ritualists = new List<Pawn>() { PawnGenerator.GeneratePawn(DefOfs.Horaxian_Highthrall, Faction.OfHoraxCult), PawnGenerator.GeneratePawn(DefOfs.Horaxian_Underthrall, Faction.OfHoraxCult), PawnGenerator.GeneratePawn(DefOfs.Horaxian_Underthrall, Faction.OfHoraxCult) };
             PawnGroupKindDef pawnGroup = SyndicateUtility.GetAnomalyGroupKindDefBasedOnMonolithLevel().RandomElement();
             float num = 265f - site.ActualThreatPoints;
             List<Pawn> cultists = new List<Pawn>();
@@ -44,9 +43,6 @@ namespace ProjectAnomalySyndicate.Generation
             }
             DistressCallUtility.SpawnPawns(map, cultists, map.Center, 20);
             Lord lord = LordMaker.MakeNewLord(Faction.OfHoraxCult, new LordJob_DefendBase(Faction.OfHoraxCult, map.Center), map, cultists);
-            DistressCallUtility.SpawnPawns(map, ritualists, map.Center, 3);
-            Lord lord1 = LordMaker.MakeNewLord(Faction.OfHoraxCult, new LordJob_DefendPoint(map.Center, 5, 5, false, false), map, ritualists);
-
             foreach (Thing allThing in map.listerThings.AllThings)
             {
                 if (allThing.def.category == ThingCategory.Item)
