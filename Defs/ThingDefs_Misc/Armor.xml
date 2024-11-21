@@ -3,7 +3,8 @@
       <ThingDef ParentName="ApparelArmorHelmetPowerBase">
         <defName>Gha_Apparel_RevenateHelmet</defName>
         <label>revenate helment</label>
-        <description>A revenate armor helmet, with a built-in status computer and layered plasteel-weave plates.\n\nArmor like this is often used by rapid-incursion space marines.</description>
+        <description>The Revenant Helmet is a specialized piece of Syndicate equipment, commonly issued to high-ranking soldiers tasked with anomaly containment. Equipped with advanced sensory modules, the helmet grants wearers a brief early warning & sight on otherwise invisible anomalies.
+</description>
         <tradeTags>
           <li>Armor</li>
         </tradeTags>
@@ -25,12 +26,8 @@
         </statBases>
         
         <modExtensions>
-          <li Class="ProjectAnomalySyndicate.BloodRainResistanceModExtension">
-            <bloodRainResistance>2</bloodRainResistance>
-            
-          </li>
           <li Class="ProjectAnomalySyndicate.InvisibilityDisruptorModExtension">
-            <radius>19.9</radius>
+            <radius>12.5</radius>
           </li>
           
         </modExtensions>
@@ -267,7 +264,7 @@
       <ThingDef ParentName="ApparelArmorReconBase">
         <defName>Gha_Apparel_ArmorSynapse</defName>
         <label>synapse armor</label>
-        <description>A suit of light partially-powered armor, designed to permit quick movement. Plasteel-weave plates block attacks without compromising mobility, and neuro-memetic assistors in the lower body allow a human to wear the armor and still move easily.\n\nExpensive and beautiful, prestige armor like this is usually made for those of high status. Embedded eltex threads also enhance the wearer's psychic sensitivity.</description>
+        <description>The Synapse Armor is standard-issue for Syndicate field researchers, designed to protect against environmental dangers while remaining light and flexible. It’s commonly worn by researchers deployed inside anomaly territory.</description>
         <graphicData>
           <texPath>Things/Pawn/Apparel/Synapse_Armor/Synapse_Armor</texPath>
           <graphicClass>Graphic_Single</graphicClass>
@@ -314,7 +311,7 @@
       <ThingDef ParentName="ApparelArmorHelmetReconBase">
         <defName>Gha_Apparel_ArmorSynapseHelmet</defName>
         <label>synapse helmet</label>
-        <description>A high-tech armored helmet with a built-in status computer and a protective plasteel-weave plate.\n\nExpensive and beautiful, prestige armor like this is usually made for those of high status. Embedded eltex threads also enhance the wearer's psychic sensitivity.</description>
+        <description>The Synapse Helmet is standard-issue for Syndicate field researchers, designed to protect against environmental dangers while remaining light and flexible. It’s commonly worn by researchers deployed inside anomaly territory.</description>
         <graphicData>
           <texPath>Things/Pawn/Apparel/Synapse_Armor_Helmet/Synapse_Helm</texPath>
           <shaderType>CutoutComplex</shaderType>

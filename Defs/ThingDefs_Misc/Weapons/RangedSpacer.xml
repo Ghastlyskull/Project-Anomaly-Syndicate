@@ -3,7 +3,8 @@
     <ThingDef ParentName="BaseHumanMakeableGun">
         <defName>Gun_Gha_PlasmaRifle</defName>
         <label>plasma assault rifle</label>
-        <description>A charged-shot assault rifle. Pulse-charge technology charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.</description>
+        <description>The plasma rifle fires superheated bolts of plasma, each shot stabilized in a containment field for accuracy and power. On impact, the plasma erupts, burning through armor and flesh with devastating effect. \n\n Favored by Syndicate operatives, it’s deadly against resilient targets, leaving behind scorched wounds and cauterized surfaces. High energy output means the rifle can overheat, requiring brief cooldowns during sustained fire.
+</description>
         <techLevel>Spacer</techLevel>
         <graphicData>
           <texPath>Things/Item/Equipment/WeaponRanged/Gha_PlasmaRifle</texPath>
@@ -101,7 +102,7 @@
 <ThingDef ParentName="BaseHumanMakeableGun">
   <defName>Gun_Gha_PlasmaPistol</defName>
   <label>plasma pistol</label>
-  <description>[PlaceHolder]</description>
+  <description>The Plasma Pistol delivers a single, highly accurate shot of superheated plasma, designed for precise, controlled fire. Each shot is carefully stabilized, allowing it to burn through armor and flesh alike with deadly efficiency. Compact and reliable, this weapon is favored by Syndicate agents needing power in a sidearm, perfect for quick, lethal encounters without the risk of overheating during extended use.</description>
   <techLevel>Spacer</techLevel>
   <graphicData>
     <texPath>Things/Item/Equipment/WeaponRanged/Gha_PlasmaPistol</texPath>
@@ -199,7 +200,7 @@
 <ThingDef ParentName="BaseHumanMakeableGun">
   <defName>Gun_Gha_PlasmaCaster</defName>
   <label>plasma caster </label>
-  <description>[PlaceHolder]</description>
+  <description>The Plasma Caster unleashes rapid volleys of superheated plasma, each shot sacrifices precision for sheer volume, making it ideal to overwhelm single targets or swarms. However, sustained use risks overheating, requiring careful timing in prolonged engagements.</description>
   <techLevel>Spacer</techLevel>
   <graphicData>
     <texPath>Things/Item/Equipment/WeaponRanged/Gha_PlasmaCaster</texPath>
