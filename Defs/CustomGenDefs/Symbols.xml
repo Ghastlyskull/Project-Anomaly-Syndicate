@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--_____ Pawn Symbols _____-->
+
+    <!--Toughspike-->
+    <KCSG.SymbolDef>
+        <defName>Gha_PawnSymbol_Toughspike</defName>
+        <pawnKindDef>Toughspike</pawnKindDef>
+        <!-- Default:false -->
+        <isSlave>false</isSlave>
+        <!-- To spawn part of map faction Default:true -->
+        <spawnPartOfFaction>false</spawnPartOfFaction>
+        <!-- Null for wild pawn, or map faction if spawnPartOfFaction is true -->
+        <faction>Entities</faction>
+        <numberToSpawn>1</numberToSpawn>
+        <!-- Default:false -->
+        <spawnDead>false</spawnDead>
+        <!-- Default:false -->
+        <spawnRotten>false</spawnRotten>
+        <!-- Default:false -->
+        <spawnFilthAround>false</spawnFilthAround>
+        <!-- Default:false -->
+        <defendSpawnPoint>false</defendSpawnPoint>
+    </KCSG.SymbolDef>
+
+    <!--Fingerspike-->
+    <KCSG.SymbolDef>
+        <defName>Gha_PawnSymbol_Fingerspike</defName>
+        <pawnKindDef>Fingerspike</pawnKindDef>
+        <!-- Default:false -->
+        <isSlave>false</isSlave>
+        <!-- To spawn part of map faction Default:true -->
+        <spawnPartOfFaction>false</spawnPartOfFaction>
+        <!-- Null for wild pawn, or map faction if spawnPartOfFaction is true -->
+        <faction>Entities</faction>
+        <numberToSpawn>1</numberToSpawn>
+        <!-- Default:false -->
+        <spawnDead>false</spawnDead>
+        <!-- Default:false -->
+        <spawnRotten>false</spawnRotten>
+        <!-- Default:false -->
+        <spawnFilthAround>false</spawnFilthAround>
+        <!-- Default:false -->
+        <defendSpawnPoint>true</defendSpawnPoint>
+    </KCSG.SymbolDef>
+
+    <!--Trispike-->
+    <KCSG.SymbolDef>
+        <defName>Gha_PawnSymbol_Trispike</defName>
+        <pawnKindDef>Trispike</pawnKindDef>
+        <!-- Default:false -->
+        <isSlave>false</isSlave>
+        <!-- To spawn part of map faction Default:true -->
+        <spawnPartOfFaction>false</spawnPartOfFaction>
+        <!-- Null for wild pawn, or map faction if spawnPartOfFaction is true -->
+        <faction>Entities</faction>
+        <numberToSpawn>1</numberToSpawn>
+        <!-- Default:false -->
+        <spawnDead>false</spawnDead>
+        <!-- Default:false -->
+        <spawnRotten>false</spawnRotten>
+        <!-- Default:false -->
+        <spawnFilthAround>false</spawnFilthAround>
+        <!-- Default:false -->
+        <defendSpawnPoint>true</defendSpawnPoint>
+    </KCSG.SymbolDef>
+    
+    <!-- _____ Container Symbols _____ -->
+    <KCSG.SymbolDef>
+        <defName>Gha_HermeticCrate_South</defName>
+        <thing>AncientHermeticCrate</thing>
+        <rotation>South</rotation>
+        <!-- Can be any thingSetMakerDef -->
+        <thingSetMakerDef>MapGen_AncientComplex_SecurityCrate</thingSetMakerDef>
+        <!-- default is 1, will not spawn stack bigger than the item maxStackSize -->
+        <crateStackMultiplier>5</crateStackMultiplier>
+      </KCSG.SymbolDef>
+</Defs>
