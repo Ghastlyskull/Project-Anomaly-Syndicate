@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+  <!--____ Ancient Syndicate Objects ____ -->
     <!-- Ancient Obelisk Suppresor -->
     <ThingDef ParentName="NonDeconstructibleAncientBuildingBase">
         <defName>AncientObeliskSuppresor</defName>
@@ -102,4 +103,109 @@
         </killedLeavings>
         <rotatable>true</rotatable>
     </ThingDef>
+    <!-- Long Syndicate Door -->
+    <ThingDef ParentName="NonDeconstructibleAncientBuildingBase">
+      <defName>Gha_LongAncientDoor</defName>
+      <label>ancient facility door</label>
+      <description>A large facility door, typically found in most syndicate facilities.</description>
+      <rotatable>true</rotatable>
+      <graphicData>
+        <texPath>Things/Buildings/Ruins/AncientVaultDoor_Long</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(4,1)</drawSize>
+        <shadowData>
+          <volume>(1.1, 0.66, 2.4)</volume>
+        </shadowData>
+      </graphicData>
+      <size>(4,1)</size>
+      <fillPercent>0.5</fillPercent>
+      <castEdgeShadows>true</castEdgeShadows>
+      <passability>PassThroughOnly</passability>
+      <pathCost>50</pathCost>
+      <statBases>
+        <MaxHitPoints>2000</MaxHitPoints>
+      </statBases>
+      <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+      <!--
+      <killedLeavings>
+        <ChunkSlagSteel>6</ChunkSlagSteel>
+      </killedLeavings>
+      -->
+    </ThingDef>
+
+    <!-- Regular Syndicate Door -->
+    <ThingDef ParentName="NonDeconstructibleAncientBuildingBase">
+      <defName>Gha_RegularAncientDoor</defName>
+      <label>ancient facility door</label>
+      <description>A large facility door, typically found in most syndicate facilities.</description>
+      <rotatable>true</rotatable>
+      <graphicData>
+        <texPath>Things/Buildings/Ruins/AncientVaultDoor</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(3,1)</drawSize>
+        <shadowData>
+          <volume>(1.1, 0.66, 2.4)</volume>
+        </shadowData>
+      </graphicData>
+      <size>(3,1)</size>
+      <fillPercent>0.5</fillPercent>
+      <castEdgeShadows>true</castEdgeShadows>
+      <passability>PassThroughOnly</passability>
+      <pathCost>50</pathCost>
+      <statBases>
+        <MaxHitPoints>2000</MaxHitPoints>
+      </statBases>
+      <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    </ThingDef>
+
+    <!-- Small Syndicate Door -->
+    <ThingDef ParentName="NonDeconstructibleAncientBuildingBase">
+      <defName>Gha_SmallAncientDoor</defName>
+      <label>ancient facility door</label>
+      <description>A small facility door, typically found in most syndicate facilities.</description>
+      <rotatable>true</rotatable>
+      <graphicData>
+        <texPath>Things/Buildings/Ruins/AncientVaultDoor_Small</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(2,1)</drawSize>
+        <shadowData>
+          <volume>(1.1, 0.66, 2.4)</volume>
+        </shadowData>
+      </graphicData>
+      <size>(2,1)</size>
+      <fillPercent>0.5</fillPercent>
+      <castEdgeShadows>true</castEdgeShadows>
+      <passability>PassThroughOnly</passability>
+      <pathCost>50</pathCost>
+      <statBases>
+        <MaxHitPoints>2000</MaxHitPoints>
+      </statBases>
+      <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    </ThingDef>
+
+    <!-- Super Small Syndicate Door -->
+    <ThingDef ParentName="NonDeconstructibleAncientBuildingBase">
+      <defName>Gha_SuperSmallAncientDoor</defName>
+      <label>ancient facility door</label>
+      <description>A small facility door, typically found in most syndicate facilities.</description>
+      <rotatable>true</rotatable>
+      <graphicData>
+        <texPath>Things/Buildings/Ruins/AncientVaultDoor_SuperSmall</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(1,1)</drawSize>
+        <shadowData>
+          <volume>(1.1, 0.66, 2.4)</volume>
+        </shadowData>
+      </graphicData>
+      <size>(1,1)</size>
+      <fillPercent>1</fillPercent>
+      <castEdgeShadows>true</castEdgeShadows>
+      <passability>PassThroughOnly</passability>
+      <pathCost>50</pathCost>
+      <statBases>
+        <MaxHitPoints>2000</MaxHitPoints>
+      </statBases>
+      <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    </ThingDef>
+  <!--___ Ancient Anomaly Objects ___ -->
 </Defs>
