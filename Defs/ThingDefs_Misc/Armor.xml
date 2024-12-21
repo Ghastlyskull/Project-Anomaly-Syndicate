@@ -54,7 +54,7 @@
               <li>SpacerMilitary</li>
             </defaultOutfitTags>
             <useDeflectMetalEffect>true</useDeflectMetalEffect>
-          </apparel>
+        </apparel>
         <recipeMaker>
           <researchPrerequisite Inherit="False">Gha_Research_Plasma_Weaponry</researchPrerequisite>
           <displayPriority>100</displayPriority>
@@ -100,7 +100,7 @@
           </recipeUsers>
         </recipeMaker>
         <graphicData>
-          <texPath>Things/Pawn/Humanlike/Apparel/CataphractArmor/CataphractArmor</texPath>
+          <texPath>Things/Pawn/Apparel/ExterminatorArmor/ExterminatorArmor</texPath>
           <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <uiIconScale>1.25</uiIconScale>
@@ -139,7 +139,7 @@
             <li>Arms</li>
             <li>Legs</li>
           </bodyPartGroups>
-          <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CataphractArmor/CataphractArmor</wornGraphicPath>
+          <wornGraphicPath>Things/Pawn/Apparel/ExterminatorArmor/ExterminatorArmor_Hulk</wornGraphicPath>
           <layers>
             <li>Middle</li>
             <li>Shell</li>
@@ -174,7 +174,16 @@
         </colorGenerator>
         <comps>
           <li Class="CompProperties_Biocodable"/>
+
+          <li Class="AthenaFramework.CompProperties_CustomApparelBody">
+            <preventBodytype>true</preventBodytype>
+          </li>
         </comps>
+        <modExtensions>
+          <li Class="ProjectAnomalySyndicate.BloodRainResistanceModExtension">
+            <bloodRainResistance>0.5</bloodRainResistance> 
+          </li>
+        </modExtensions>
         <thingSetMakerTags>
           <li>RewardStandardHighFreq</li>
         </thingSetMakerTags>
@@ -193,7 +202,7 @@
           </recipeUsers>
         </recipeMaker>
         <graphicData>
-          <texPath>Things/Pawn/Humanlike/Apparel/CataphractArmorHelmet/CataphractHelmet</texPath>
+          <texPath>Things/Pawn/Apparel/ExterminatorHelment/ExterminatorHelm</texPath>
           <graphicClass>Graphic_Single</graphicClass>
           <drawSize>(0.9, 0.9)</drawSize>
         </graphicData>
@@ -222,7 +231,8 @@
           <bodyPartGroups>
             <li>FullHead</li>
           </bodyPartGroups>
-          <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CataphractArmorHelmet/CataphractHelmet</wornGraphicPath>
+          <wornGraphicPath>Things/Pawn/Apparel/ExterminatorHelment/ExterminatorHelm</wornGraphicPath>
+          <useWornGraphicMask>true</useWornGraphicMask>
           <layers>
             <li>Overhead</li>
           </layers>
@@ -255,10 +265,20 @@
         <comps>
           <li Class="CompProperties_Biocodable"/>
         </comps>
+        <modExtensions>
+          <li Class="ProjectAnomalySyndicate.BloodRainResistanceModExtension">
+            <bloodRainResistance>0.5</bloodRainResistance> 
+          </li>
+
+          <li Class="ProjectAnomalySyndicate.InvisibilityDisruptorModExtension">
+            <radius>19</radius>
+          </li>
+        </modExtensions>
         <thingSetMakerTags>
           <li>RewardStandardHighFreq</li>
         </thingSetMakerTags>
       </ThingDef>
+      
       <!--Synapse Armor-->
       <ThingDef ParentName="ApparelArmorReconBase">
         <defName>Gha_Apparel_ArmorSynapse</defName>

@@ -28,8 +28,7 @@
       </symbolResolvers>
       <preventBridgeable>true</preventBridgeable>
       <structureLayoutDefs>
-        <!--<li>AbandonedSyndicateFacility_Flesh_A</li>-->
-        <li>Gha_AbandondedFacility_Flesh</li>
+        <li>AbandonedSyndicateFacility_Flesh_A</li>
       </structureLayoutDefs>
       <scatterThings>
         <li>Gold</li>

@@ -16,12 +16,12 @@
 		<li>
 			<packageId>Ludeon.RimWorld.Royalty</packageId>
 			<displayName>Rimworld - Royalty</displayName>
-			<steamWorkshopUrl>https://store.steampowered.com/app/1826140/RimWorld__Biotech/</steamWorkshopUrl>
+			<steamWorkshopUrl>https://store.steampowered.com/app/1149640/RimWorld__Royalty/</steamWorkshopUrl>
 		</li>
 		<li>
 			<packageId>Ludeon.RimWorld.Anomaly</packageId>
 			<displayName>Rimworld - Anomaly</displayName>
-			<steamWorkshopUrl>https://store.steampowered.com/app/1826140/RimWorld__Anomaly/</steamWorkshopUrl>
+			<steamWorkshopUrl>https://store.steampowered.com/app/2380740/RimWorld__Anomaly/</steamWorkshopUrl>
 		</li>
 		<li>
 			<packageId>smartkar.athenaframework</packageId>
