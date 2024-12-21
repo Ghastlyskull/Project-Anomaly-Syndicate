@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Item Box Sample -->
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>GHA_Syndicate_Capsule</defName>
+		<label>Syndicate Capsule</label>
+		<description>.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/GHA_SyndicateCapsule</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<stackLimit>1</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>2</Mass>
+			<Flammability>0.2</Flammability>
+		</statBases>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<tradeability>Sellable</tradeability>
+		<techLevel>Industrial</techLevel>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Open {0}</useLabel>
+			</li>
+			<li Class="Rick_ItemBox.CompProperties_UseEffectItemBox">
+				<numWeightedDrops>3</numWeightedDrops>
+				<guaranteedDrops>
+					<li>
+						<thingDef>MealSurvivalPack</thingDef>
+						<countRange>3</countRange>
+						<weight>1</weight>
+					</li>
+					<li>
+						<thingDef>MedicineIndustrial</thingDef>
+						<countRange>3</countRange>
+						<weight>1</weight>
+					</li>
+				</guaranteedDrops>
+				<weightedDrops>
+					<li>
+						<thingDef>MealSurvivalPack</thingDef>
+						<countRange>3</countRange>
+						<weight>1</weight>
+					</li>
+					<li>
+						<thingDef>MedicineIndustrial</thingDef>
+						<countRange>3</countRange>
+						<weight>1</weight>
+					</li>
+					<li>
+						<thingDef>Beer</thingDef>
+						<countRange>1</countRange>
+						<weight>0.5</weight>
+					</li>
+					<li>
+						<thingDef>Chocolate</thingDef>
+						<countRange>1~3</countRange>
+						<weight>1</weight>
+					</li>
+					<li>
+						<thingDef>Silver</thingDef>
+						<countRange>100</countRange>
+						<weight>0.001</weight>
+					</li>
+				</weightedDrops>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+
+</Defs>
