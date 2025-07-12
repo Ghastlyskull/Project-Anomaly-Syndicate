@@ -38,6 +38,7 @@
       <statBases>
         <BandwidthCost>3</BandwidthCost>
         <ControlTakingTime>18</ControlTakingTime>
+        <MoveSpeed>5</MoveSpeed>
       </statBases>
     </ThingDef>
     
@@ -50,26 +51,26 @@
       <lifeStages>
         <li MayRequire="Ludeon.RimWorld.Biotech">
           <bodyGraphicData>
-            <texPath>Things/Pawn/Mechanoid/Tesseron</texPath>
-            <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Beamstrider</maskPath>
+            <texPath>Things/Pawn/Mechanoid/Vanguard/Clean/VanguardClean</texPath>
+            <maskPath>Things/Pawn/Mechanoid/Vanguard/AllegianceOverlays/Mech_Vanguard</maskPath>
             <shaderType>CutoutWithOverlay</shaderType>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>1.5</drawSize>
+            <drawSize>2.3</drawSize>
           </bodyGraphicData>
         </li>
         <li>
           <bodyGraphicData>
-            <texPath>Things/Pawn/Mechanoid/TesseronAncient</texPath>
-            <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Beamstrider</maskPath>
+            <texPath>Things/Pawn/Mechanoid/Vanguard/Vanguard</texPath>
+            <maskPath>Things/Pawn/Mechanoid/Vanguard/AllegianceOverlays/Mech_Vanguard</maskPath>
             <shaderType>CutoutWithOverlay</shaderType>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>1.5</drawSize>
+            <drawSize>2.3</drawSize>
           </bodyGraphicData>
         </li>
       </lifeStages>
       <weaponMoney>9999~9999</weaponMoney>
       <weaponTags>
-        <li>MechanoidGunPlasmaSpewer</li>
+        <li></li>
       </weaponTags>
       <fixedInventory>
         <Gun_Gha_VanguardPlasmaRifle/>
@@ -116,6 +117,7 @@
         <statBases>
           <BandwidthCost>3</BandwidthCost>
           <ControlTakingTime>18</ControlTakingTime>
+          <MoveSpeed>5</MoveSpeed>
         </statBases>
     </ThingDef>
     
@@ -128,26 +130,29 @@
         <lifeStages>
           <li>
             <bodyGraphicData MayRequire="Ludeon.RimWorld.Biotech">
-              <texPath>Things/Pawn/Mechanoid/Tesseron</texPath>
-              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Beamstrider</maskPath>
+              <texPath>Things/Pawn/Mechanoid/Venatoris/Clean/VenatorisClean</texPath>
+              <maskPath>Things/Pawn/Mechanoid/Venatoris/AllegianceOverlays/Mech_Venatoris</maskPath>
               <shaderType>CutoutWithOverlay</shaderType>
               <graphicClass>Graphic_Multi</graphicClass>
-              <drawSize>1.5</drawSize>
+              <drawSize>2</drawSize>
             </bodyGraphicData>
           </li>
           <li>
             <bodyGraphicData>
-              <texPath>Things/Pawn/Mechanoid/TesseronAncient</texPath>
-              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Beamstrider</maskPath>
+              <texPath>Things/Pawn/Mechanoid/Venatoris/Venatoris</texPath>
+              <maskPath>Things/Pawn/Mechanoid/Venatoris/AllegianceOverlays/Mech_Venatoris</maskPath>
               <shaderType>CutoutWithOverlay</shaderType>
               <graphicClass>Graphic_Multi</graphicClass>
-              <drawSize>1.5</drawSize>
+              <drawSize>2</drawSize>
             </bodyGraphicData>
           </li>
         </lifeStages>
         <weaponMoney>9999~9999</weaponMoney>
+        <fixedInventory>
+          <Gha_Gun_Needler/>
+        </fixedInventory>
         <weaponTags>
-          <li>MechanoidGunStunNeedler</li>
+          <li></li>
         </weaponTags>
         <techHediffsChance>1</techHediffsChance>
         <techHediffsMoney>9999~9999</techHediffsMoney>

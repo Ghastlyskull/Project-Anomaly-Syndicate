@@ -178,7 +178,7 @@
       <techHediffsMoney>1000~1800</techHediffsMoney>
       <techHediffsTags>
         <li>Advanced</li>
-        <li>ImplantEmpireCommon</li>
+        <li>ImplantSyndicateCommon</li>
       </techHediffsTags>
       <initialWillRange>3~5</initialWillRange>
       <initialResistanceRange>16~25</initialResistanceRange>
@@ -346,6 +346,7 @@
       </specificApparelRequirements>
       <techHediffsTags>
         <li>ImplantEmpireCommon</li>
+        <li>ImplantSyndicateCommon</li>
       </techHediffsTags>
       <skills>
         <li>
@@ -386,6 +387,7 @@
       </apparelRequired>
       <techHediffsTags>
         <li>ImplantEmpireCommon</li>
+        <li>ImplantSyndicateCommon</li>
       </techHediffsTags>
       <skills>
         <li>
@@ -419,8 +421,7 @@
       </weaponTags>
       <apparelMoney>6000~9000</apparelMoney>
       <apparelRequired>
-        <li>Apparel_ArmorHelmetRecon</li>
-        <li>Apparel_ArmorRecon</li>
+        <li>Gha_Apparel_RevenateHelmet</li>
       </apparelRequired>
       <disallowedTraits>
         <li>Brawler</li>
@@ -444,6 +445,7 @@
       </specificApparelRequirements>
       <techHediffsTags>
         <li>ImplantEmpireCommon</li>
+        <li>ImplantSyndicateCommon</li>
       </techHediffsTags>
       <skills>
         <li>
@@ -477,12 +479,14 @@
       </weaponTags>
       <apparelRequired>
         <li>Apparel_PlateArmor</li>
+        <li>Gha_Apparel_RevenateHelmet</li>
         <li>Apparel_ShieldBelt</li>
       </apparelRequired>
       <apparelColor>(42, 52, 57)</apparelColor>
       <techHediffsTags>
         <li>Advanced</li>
         <li>ImplantEmpireCommon</li>
+        <li>ImplantSyndicateCommon</li>
       </techHediffsTags>
       <skills>
         <li>
@@ -527,8 +531,8 @@
       </weaponTags>
       <apparelColor>(42, 52, 57)</apparelColor>
       <apparelRequired>
-        <li>Apparel_ArmorHelmetCataphract</li>
-        <li>Apparel_ArmorCataphract</li>
+        <li>Gha_Apparel_ArmorExterminator</li>
+        <li>Gha_Apparel_ArmorHelmetExterminator</li>
       </apparelRequired>
       <specificApparelRequirements Inherit="False">
         <li>
@@ -554,6 +558,7 @@
       <techHediffsTags>
         <li>Advanced</li>
         <li>ImplantEmpireCommon</li>
+        <li>ImplantSyndicateCommon</li>
       </techHediffsTags>
       <techHediffsRequired>
         <li>ArmorskinGland</li>
@@ -588,7 +593,7 @@
       <initialWillRange>5~7</initialWillRange>
       <itemQuality>Excellent</itemQuality>
       <weaponMoney>3000~3500</weaponMoney>
-      <apparelColor>(42, 52, 57)</apparelColor>
+      <apparelColor>(51,51,51,255)</apparelColor>
       <apparelRequired>
         <li>Apparel_ArmorHelmetCataphractPrestige</li>
         <li>Apparel_ArmorCataphractPrestige</li>
@@ -596,7 +601,7 @@
       <specificApparelRequirements Inherit="False">
         <li>
           <bodyPartGroup>FullHead</bodyPartGroup>
-          <color>(68,68,68)</color>
+          <color>(192,192,192,255)</color>
         </li>
         <li>
           <bodyPartGroup>Torso</bodyPartGroup>
@@ -613,6 +618,7 @@
       <techHediffsTags>
         <li>Advanced</li>
         <li>ImplantEmpireCommon</li>
+        <li>ImplantSyndicateCommon</li>
         <li>ImplantEmpireRoyal</li>
       </techHediffsTags>
       <techHediffsDisallowTags>
@@ -732,6 +738,7 @@
         <li>Advanced</li>
         <li>ImplantEmpireRoyal</li>
         <li>ImplantEmpireCommon</li>
+        <li>ImplantSyndicateCommon</li>
       </techHediffsTags>
       <techHediffsDisallowTags>
         <li>PainCauser</li>
@@ -1336,7 +1343,7 @@
       <specificApparelRequirements>
         <li>
           <bodyPartGroup>Torso</bodyPartGroup>
-          <requiredTag>RoyalRobe</requiredTag>
+          <requiredTag>SyndicatePromoter</requiredTag>
         </li>
         <li>
           <bodyPartGroup>UpperHead</bodyPartGroup>

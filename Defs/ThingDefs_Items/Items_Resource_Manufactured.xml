@@ -3,7 +3,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>MindWakeSerum</defName>
         <label>mind wake serum</label>
-        <description>A capsule of thick grey fluid containing a mixture of deadlife dust and advanced biochemicals. Inject it into the corpse of a ghoul to return them to life. The resurrection process takes several hours.</description>
+        <description>A mixture of deadlife dust and advanced biochemicals course through this creature’s veins that temporarily restores mental clarity in ghouls. Once administered, it reactivates dormant neural pathways, allowing ghouls to regain full cognitive function for a short period. Under its effects, ghouls experience a brief return to their former selves. However, as the serum wears off, they gradually slip back into their instinct-driven state.</description>
         <graphicData>
           <texPath>Things/Item/Serum/mind_wake_serum</texPath>
           <graphicClass>Graphic_Single</graphicClass>
@@ -26,8 +26,9 @@
           <li>Drugs</li>
         </thingCategories>
         <costList>
-          <Meat_Twisted>20</Meat_Twisted>
-          <Bioferrite>20</Bioferrite>
+          <Meat_Twisted>10</Meat_Twisted>
+          <Bioferrite>40</Bioferrite>
+          <Shard>1</Shard>
         </costList>
         <recipeMaker>
           <workAmount>840</workAmount>

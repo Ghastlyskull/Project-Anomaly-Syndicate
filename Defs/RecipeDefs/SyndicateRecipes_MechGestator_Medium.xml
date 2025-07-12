@@ -25,10 +25,25 @@
               </thingDefs>
             </filter>
             <count>1</count>
+            <filter>
+              <thingDefs>
+                <li>Shard</li>
+              </thingDefs>
+            </filter>
+            <count>1</count>
+            <filter>
+              <thingDefs>
+                <li>Bioferrite</li>
+              </thingDefs>
+            </filter>
+            <count>30</count>
           </li>
         </ingredients>
-        <researchPrerequisite>UltraMechtech</researchPrerequisite>
+        <researchPrerequisite>Gha_Research_Mechanoids</researchPrerequisite>
         <gestationCycles>4</gestationCycles>
+        <recipeUsers>
+          <li>LargeMechGestator</li>
+        </recipeUsers>
     </RecipeDef>
     
     <!-- Vanguard -->
@@ -49,7 +64,7 @@
         <label>gestate venatoris</label>
         <description>Gestate a venatoris mechanoid.</description>
         <products>
-          <Mech_Gha_Vanguard>1</Mech_Gha_Vanguard>
+          <Mech_Gha_Venatoris>1</Mech_Gha_Venatoris>
         </products>
         <descriptionHyperlinks>
           <ThingDef>Mech_Gha_Venatoris</ThingDef>

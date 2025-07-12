@@ -34,6 +34,7 @@
         <costList>
           <Plasteel>75</Plasteel>
           <ComponentSpacer>2</ComponentSpacer>
+          <Shard>2</Shard>
         </costList>
         <thingSetMakerTags>
           <li>RewardStandardQualitySuper</li>
@@ -132,6 +133,7 @@
   <costList>
     <Plasteel>50</Plasteel>
     <ComponentSpacer>2</ComponentSpacer>
+    <Shard>1</Shard>
   </costList>
   <thingSetMakerTags>
     <li>RewardStandardQualitySuper</li>
@@ -230,6 +232,7 @@
   <costList>
     <Plasteel>125</Plasteel>
     <ComponentSpacer>3</ComponentSpacer>
+    <Shard>2</Shard>
   </costList>
   <thingSetMakerTags>
     <li>RewardStandardQualitySuper</li>
@@ -331,8 +334,8 @@
       <warmupTime>1.5</warmupTime>
       <range>20.5</range>
       <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-      <burstShotCount>9</burstShotCount>
-      <soundCast>Gorehulk_Spine_Launch</soundCast>
+      <burstShotCount>3</burstShotCount>
+      <soundCast>Shot_NeedleGun</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </li>
@@ -360,7 +363,7 @@
   </graphicData>
   <projectile>
     <damageDef>NeedlerStun</damageDef>
-    <damageAmountBase>10</damageAmountBase>
+    <damageAmountBase>7</damageAmountBase>
     <armorPenetrationBase>0.35</armorPenetrationBase>
     <stoppingPower>1.5</stoppingPower>
     <speed>70</speed>
@@ -399,26 +402,30 @@
   </weaponClasses>
   <verbs>
     <li>
-      <verbClass>AthenaFramework.Verb_ShootRunningBeam</verbClass>
+      <verbClass>Verb_ShootBeam</verbClass>
       <hasStandardCommand>true</hasStandardCommand>
       <warmupTime>1.8</warmupTime>
-      <range>15.4</range>
+      <range>24.9</range>
       <minRange>1.9</minRange>
-      <stopBurstWithoutLos>false</stopBurstWithoutLos>
-      <ticksBetweenBurstShots>27</ticksBetweenBurstShots>
+      <beamFullWidthRange>6.9</beamFullWidthRange>
       <burstShotCount>10</burstShotCount>
+      <showBurstShotStats>false</showBurstShotStats>
+      <beamWidth>6</beamWidth>
+      <ticksBetweenBurstShots>27</ticksBetweenBurstShots>
       <beamDamageDef>Gha_PlasmaBeam</beamDamageDef>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
       <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
       <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
       <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
-      <beamMoteDef>Gha_Mote_PlasmaBeamBase</beamMoteDef>
-      <beamEndEffecterDef>Gha_PlasmaBeam_End</beamEndEffecterDef>
-      <beamChanceToStartFire>0.95</beamChanceToStartFire>
-      <beamChanceToAttachFire>0.95</beamChanceToAttachFire>
+      <beamMaxDeviation>1.5</beamMaxDeviation>
+      <beamCurvature>0.6</beamCurvature>
+      <beamMoteDef>Gha_Mote_GraserBeamBase</beamMoteDef>
+      <beamEndEffecterDef>Gha_GraserBeam_End</beamEndEffecterDef>
+      <beamChanceToStartFire>0.85</beamChanceToStartFire>
+      <beamChanceToAttachFire>0.85</beamChanceToAttachFire>
       <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
-      <beamLineFleckDef>Gha_Fleck_PlasmaSpark</beamLineFleckDef>
+      <beamLineFleckDef>Gha_Fleck_BeamSpark</beamLineFleckDef>
       <beamStartOffset>0.8</beamStartOffset>
       <beamLineFleckChanceCurve>
         <points>
@@ -504,26 +511,30 @@
   </weaponClasses>
   <verbs>
     <li>
-      <verbClass>AthenaFramework.Verb_ShootRunningBeam</verbClass>
+      <verbClass>Verb_ShootBeam</verbClass>
       <hasStandardCommand>true</hasStandardCommand>
       <warmupTime>1.8</warmupTime>
-      <range>15.4</range>
+      <range>24.9</range>
       <minRange>1.9</minRange>
-      <stopBurstWithoutLos>false</stopBurstWithoutLos>
-      <ticksBetweenBurstShots>27</ticksBetweenBurstShots>
+      <beamFullWidthRange>6.9</beamFullWidthRange>
       <burstShotCount>10</burstShotCount>
+      <showBurstShotStats>false</showBurstShotStats>
+      <beamWidth>6</beamWidth>
+      <ticksBetweenBurstShots>27</ticksBetweenBurstShots>
       <beamDamageDef>Gha_PlasmaBeam_Void</beamDamageDef>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
       <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
       <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
       <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
-      <beamMoteDef>Gha_Mote_PlasmaBeamBase_Void</beamMoteDef>
-      <beamEndEffecterDef>Gha_PlasmaBeam_End_Void</beamEndEffecterDef>
-      <beamChanceToStartFire>0.95</beamChanceToStartFire>
-      <beamChanceToAttachFire>0.95</beamChanceToAttachFire>
+      <beamMaxDeviation>1.5</beamMaxDeviation>
+      <beamCurvature>0.6</beamCurvature>
+      <beamMoteDef>Gha_Mote_GraserBeamBase_Void</beamMoteDef>
+      <beamEndEffecterDef>Gha_GraserBeam_End_Void</beamEndEffecterDef>
+      <beamChanceToStartFire>0.85</beamChanceToStartFire>
+      <beamChanceToAttachFire>0.85</beamChanceToAttachFire>
       <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
-      <beamLineFleckDef>Gha_Fleck_PlasmaSpark_Void</beamLineFleckDef>
+      <beamLineFleckDef>Gha_Fleck_BeamSpark_Void</beamLineFleckDef>
       <beamStartOffset>0.8</beamStartOffset>
       <beamLineFleckChanceCurve>
         <points>

@@ -168,26 +168,26 @@
 
     <!-- AncientFacilityDoorSmall(s) -->
     <KCSG.SymbolDef>
-        <defName>Gha_LongAncientDoor_North</defName>
-        <thing>Gha_LongAncientDoor</thing>
+        <defName>Gha_SmallAncientDoor_North</defName>
+        <thing>Gha_SmallAncientDoor</thing>
         <rotation>North</rotation>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
-        <defName>Gha_LongAncientDoor_South</defName>
-        <thing>Gha_LongAncientDoor</thing>
+        <defName>Gha_SmallAncientDoor_South</defName>
+        <thing>Gha_SmallAncientDoor</thing>
         <rotation>South</rotation>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
-        <defName>Gha_LongAncientDoor_East</defName>
-        <thing>Gha_LongAncientDoor</thing>
+        <defName>Gha_SmallAncientDoor_East</defName>
+        <thing>Gha_SmallAncientDoor</thing>
         <rotation>East</rotation>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
-        <defName>Gha_LongAncientDoor_West</defName>
-        <thing>Gha_LongAncientDoor</thing>
+        <defName>Gha_SmallAncientDoor_West</defName>
+        <thing>Gha_SmallAncientDoor</thing>
         <rotation>West</rotation>
     </KCSG.SymbolDef>
 
@@ -488,26 +488,26 @@
     </KCSG.SymbolDef>
     <!-- Ancient Rusted Car Frame -->
     <KCSG.SymbolDef>
-        <defName>IGha_AncientRustedJeep_North</defName>
-        <thing>IGha_AncientRustedJeep</thing>
+        <defName>IGha_AncientRustedCarFrame_North</defName>
+        <thing>IGha_AncientRustedCarFrame</thing>
         <rotation>North</rotation>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
-        <defName>IGha_AncientRustedJeep_South</defName>
-        <thing>IGha_AncientRustedJeep</thing>
+        <defName>IGha_AncientRustedCarFrame_South</defName>
+        <thing>IGha_AncientRustedCarFrame</thing>
         <rotation>South</rotation>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
-        <defName>IGha_AncientRustedJeep_East</defName>
-        <thing>IGha_AncientRustedJeep</thing>
+        <defName>IGha_AncientRustedCarFrame_East</defName>
+        <thing>IGha_AncientRustedCarFrame</thing>
         <rotation>East</rotation>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
-        <defName>IGha_AncientRustedJeep_West</defName>
-        <thing>IGha_AncientRustedJeep</thing>
+        <defName>IGha_AncientRustedCarFrame_West</defName>
+        <thing>IGha_AncientRustedCarFrame</thing>
         <rotation>West</rotation>
     </KCSG.SymbolDef>
     <!-- Ancient Pipeline Section -->
@@ -682,26 +682,26 @@
     </KCSG.SymbolDef>
     <!-- Ancient Display Bank -->
     <KCSG.SymbolDef>
-        <defName>IGha_AncientRustedJeep_North</defName>
-        <thing>IGha_AncientRustedJeep</thing>
+        <defName>IGha_AncientDisplayBank_North</defName>
+        <thing>IGha_AncientDisplayBank</thing>
         <rotation>North</rotation>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
-        <defName>IGha_AncientRustedJeep_South</defName>
-        <thing>IGha_AncientRustedJeep</thing>
+        <defName>IGha_AncientDisplayBank_South</defName>
+        <thing>IGha_AncientDisplayBank</thing>
         <rotation>South</rotation>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
-        <defName>IGha_AncientRustedJeep_East</defName>
-        <thing>IGha_AncientRustedJeep</thing>
+        <defName>IGha_AncientDisplayBank_East</defName>
+        <thing>IGha_AncientDisplayBank</thing>
         <rotation>East</rotation>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
-        <defName>IGha_AncientRustedJeep_West</defName>
-        <thing>IGha_AncientRustedJeep</thing>
+        <defName>IGha_AncientDisplayBank_West</defName>
+        <thing>IGha_AncientDisplayBank</thing>
         <rotation>West</rotation>
     </KCSG.SymbolDef>
     <!-- Ancient Lock Bank -->

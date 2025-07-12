@@ -29,7 +29,7 @@
       <displayPriority>200</displayPriority>
     </recipeMaker>
     <costList>
-      <Plasteel>100</Plasteel>
+      <Plasteel>125</Plasteel>
       <ComponentSpacer>3</ComponentSpacer>
     </costList>
     <thingSetMakerTags>

@@ -151,7 +151,7 @@
     <ResearchProjectDef>
       <defName>Gha_Research_Synapse_Armor</defName>
       <label>synapse armor development</label>
-      <description>Unlocks the ability to make exterminator armor</description>
+      <description>Unlocks the ability to make synapse armor</description>
       <baseCost>1500</baseCost>
       <tab>SyndicateTab</tab>
       <techLevel>Spacer</techLevel>

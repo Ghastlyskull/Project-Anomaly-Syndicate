@@ -37,6 +37,7 @@
           <ComponentSpacer>1</ComponentSpacer>
           <Plasteel>30</Plasteel>
           <Steel>30</Steel>
+          <Shard>1</Shard>
         </costList>
         <apparel Inherit="False">
             <bodyPartGroups>
@@ -66,7 +67,7 @@
 
       <!--Exterminator Armor-->
       <ThingDef ParentName="ApparelArmorExterminatorBase">
-        <defName>Apparel_ArmorExterminator</defName>
+        <defName>Gha_Apparel_ArmorExterminator</defName>
         <label>exterminator armor</label>
         <description>A suit of heavy powered armor, built for maximum protection at the cost of mobility. Heavy layered plasteel-weave plates with solid ablative coatings stop all but the most well-aimed or powerful attacks. Neuro-memetic assistors prevent the suit's massive weight from immobilizing the wearer entirely, but the suit is still quite cumbersome.\n\nArmor like this is used by imperial cataphracts to break heavily fortified positions in frontal assaults when no other option is available.</description>
         <tradeTags>
@@ -78,7 +79,7 @@
       </ThingDef>
     
       <ThingDef ParentName="ApparelArmorHelmetExterminatorBase">
-        <defName>Apparel_ArmorHelmetExterminator</defName>
+        <defName>Gha_Apparel_ArmorHelmetExterminator</defName>
         <label>exterminator helmet</label>
         <description>A heavily-armored high-tech helmet, with a solid plasteel-weave shell and indirect visual system for non-frontal view angles. It protects against all but the most powerful or luckily-aimed shots.\n\nArmor like this is used by imperial cataphracts to break heavily fortified positions in frontal assaults when no other option is available.</description>
         <recipeMaker>
@@ -109,12 +110,12 @@
           <WorkToMake>75000</WorkToMake>
           <MaxHitPoints>400</MaxHitPoints>
           <Mass>15</Mass>
-          <Flammability>0.4</Flammability>
-          <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
-          <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+          <Flammability>0.6</Flammability>
+          <ArmorRating_Sharp>1.6</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
           <ArmorRating_Heat>0.6</ArmorRating_Heat>
-          <Insulation_Cold>36</Insulation_Cold>
-          <Insulation_Heat>12</Insulation_Heat>
+          <Insulation_Cold>40</Insulation_Cold>
+          <Insulation_Heat>15</Insulation_Heat>
           <EquipDelay>17</EquipDelay>
         </statBases>
         <equippedStatOffsets>
@@ -130,6 +131,7 @@
           <ComponentSpacer>6</ComponentSpacer>
           <Plasteel>150</Plasteel>
           <Uranium>50</Uranium>
+          <Shard>1</Shard>
         </costList>
         <apparel>
           <bodyPartGroups>
@@ -139,7 +141,7 @@
             <li>Arms</li>
             <li>Legs</li>
           </bodyPartGroups>
-          <wornGraphicPath>Things/Pawn/Apparel/ExterminatorArmor/ExterminatorArmor_Hulk</wornGraphicPath>
+          <wornGraphicPath>Things/Pawn/Apparel/ExterminatorArmor/ExterminatorArmor</wornGraphicPath>
           <layers>
             <li>Middle</li>
             <li>Shell</li>
@@ -174,10 +176,6 @@
         </colorGenerator>
         <comps>
           <li Class="CompProperties_Biocodable"/>
-
-          <li Class="AthenaFramework.CompProperties_CustomApparelBody">
-            <preventBodytype>true</preventBodytype>
-          </li>
         </comps>
         <modExtensions>
           <li Class="ProjectAnomalySyndicate.BloodRainResistanceModExtension">
@@ -226,6 +224,7 @@
         <costList>
           <ComponentSpacer>1</ComponentSpacer>
           <Plasteel>50</Plasteel>
+          <Shard>1</Shard>
         </costList>
         <apparel>
           <bodyPartGroups>
@@ -306,6 +305,7 @@
         <costList>
           <Gold>9</Gold>
           <Plasteel>100</Plasteel>
+          <Shard>2</Shard>
         </costList>
         <apparel>
           <tags>
@@ -346,6 +346,7 @@
         <costList>
           <Gold>4</Gold>
           <Plasteel>40</Plasteel>
+          <Shard>1</Shard>
         </costList>
         <apparel>
           <tags>
@@ -378,4 +379,143 @@
           </li>
         </modExtensions>
       </ThingDef>
+
+      <!-- Judicator Armor ThingDef/Base-->
+      <ThingDef Name="ApparelArmorJudicatorBase" ParentName="ArmorMachineableBase" Abstract="True">
+      <techLevel>Spacer</techLevel>
+      <recipeMaker>
+        <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+        <researchPrerequisite>Gha_Research_Exterminator_Armor</researchPrerequisite>
+        <skillRequirements>
+          <Crafting>8</Crafting>
+        </skillRequirements>
+        <recipeUsers Inherit="False">
+          <li>FabricationBench</li>
+        </recipeUsers>
+      </recipeMaker>
+      <graphicData>
+        <texPath>Things/Pawn/Apparel/JudicatorArmor/JudicatorArmor</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+      </graphicData>
+      <uiIconScale>1.25</uiIconScale>
+      <generateCommonality>2</generateCommonality>
+      <statBases>
+        <WorkToMake>75000</WorkToMake>
+        <MaxHitPoints>400</MaxHitPoints>
+        <Mass>15</Mass>
+        <Flammability>0.4</Flammability>
+        <ArmorRating_Sharp>1.9</ArmorRating_Sharp>
+        <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+        <ArmorRating_Heat>1.0</ArmorRating_Heat>
+        <Insulation_Cold>60</Insulation_Cold>
+        <Insulation_Heat>22</Insulation_Heat>
+        <EquipDelay>17</EquipDelay>
+      </statBases>
+      <equippedStatOffsets>
+        <MoveSpeed>-0.8</MoveSpeed>
+      </equippedStatOffsets>
+      <tradeTags>
+        <li>HiTechArmor</li>
+      </tradeTags>
+      <thingCategories>
+        <li>ApparelArmor</li>
+      </thingCategories>
+      <costList>
+        <ComponentSpacer>6</ComponentSpacer>
+        <Plasteel>150</Plasteel>
+        <Uranium>50</Uranium>
+      </costList>
+      <apparel>
+        <bodyPartGroups>
+          <li>Torso</li>
+          <li>Neck</li>
+          <li>Shoulders</li>
+          <li>Arms</li>
+          <li>Legs</li>
+        </bodyPartGroups>
+        <wornGraphicPath>Things/Pawn/Apparel/JudicatorArmor/JudicatorArmor</wornGraphicPath>
+        <layers>
+          <li>Middle</li>
+          <li>Shell</li>
+        </layers>
+          <tags>
+            <li>PrestigeCombatGear</li>
+          </tags>
+        <useDeflectMetalEffect>true</useDeflectMetalEffect>
+        <soundWear>Wear_PowerArmor</soundWear>
+        <soundRemove>Remove_PowerArmor</soundRemove>
+      </apparel>
+      <colorGenerator Class="ColorGenerator_Options">
+        <options>
+          <li>
+            <weight>10</weight>
+            <only>(0.9,0.9,0.9)</only>
+          </li>
+          <li>
+            <weight>10</weight>
+            <only>(0.33,0.33,0.33)</only>
+          </li>
+          <li>
+            <weight>10</weight>
+            <only>(0.65,0.65,0.65)</only>
+          </li>
+          <li>
+            <weight>6</weight>
+            <min>(0.3,0.3,0.3)</min>
+            <max>(0.5,0.5,0.5)</max>
+          </li>
+        </options>
+      </colorGenerator>
+      <comps>
+        <li Class="CompProperties_Biocodable"/>
+      </comps>
+      <thingSetMakerTags>
+        <li>RewardStandardHighFreq</li>
+      </thingSetMakerTags>
+    </ThingDef>
+
+    <!-- Judicator Armor -->
+    <ThingDef ParentName="ApparelArmorJudicatorBase">
+    <defName>Apparel_GHA_ArmorJudicator</defName>
+    <label>Judicator armor</label>
+    <description>A suit of heavy powered armor, built for maximum protection at the cost of mobility. Heavy layered plasteel-weave plates with solid ablative coatings stop all but the most well-aimed or powerful attacks. Neuro-memetic assistors prevent the suit's massive weight from immobilizing the wearer entirely, but the suit is still quite cumbersome.\n\nExpensive and beautiful, the judicator armor is usually made for those of high importance. Embedded eltex threads inside the robe also enhance the wearer's psychic sensitivity.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Apparel/JudicatorArmor/JudicatorArmor</texPath>
+      <shaderType>Graphic_Single</shaderType>
+    </graphicData>
+    <statBases>
+      <WorkToMake>150000</WorkToMake>
+    </statBases>
+    <equippedStatOffsets>
+      <PsychicSensitivity>0.10</PsychicSensitivity>
+      <PsychicEntropyRecoveryRate>0.066</PsychicEntropyRecoveryRate>
+    </equippedStatOffsets>
+    <costList>
+      <Uranium>60</Uranium>
+      <Plasteel>200</Plasteel>
+      <Shard>3</Shard>
+    </costList>
+    <apparel>
+      <tags>
+        <li>PrestigeCombatGear</li>
+        <li>SyndicatePromoter</li>
+      </tags>
+      <wornGraphicPath>Things/Pawn/Apparel/JudicatorArmor/JudicatorArmor</wornGraphicPath>
+    </apparel>
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
+    <recipeMaker>
+      <displayPriority>165</displayPriority>
+    </recipeMaker>
+    <modExtensions>
+        <li Class="ProjectAnomalySyndicate.BloodRainResistanceModExtension">
+          <bloodRainResistance>0.75</bloodRainResistance> 
+        </li>
+
+        <li Class="ProjectAnomalySyndicate.InvisibilityDisruptorModExtension">
+          <radius>6</radius>
+        </li>
+    </modExtensions>
+  </ThingDef>
 </Defs>

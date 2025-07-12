@@ -151,7 +151,8 @@
     </statBases>
     <costList>
       <Shard>1</Shard>
-      <Steel>15</Steel>
+      <Steel>45</Steel>
+      <Bioferrite>40</Bioferrite>
     </costList>
     <thingSetMakerTags>
       <li>RewardStandardCore</li>

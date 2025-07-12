@@ -97,6 +97,7 @@
     <costStuffCount>300</costStuffCount>
     <costList>
       <ComponentIndustrial>5</ComponentIndustrial>
+      <Shard>1</Shard>
     </costList>
     <building>
       <buildingSizeCategory>Medium</buildingSizeCategory>

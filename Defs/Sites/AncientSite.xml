@@ -29,6 +29,9 @@
       <preventBridgeable>true</preventBridgeable>
       <structureLayoutDefs>
         <li>AbandonedSyndicateFacility_Flesh_A</li>
+        <li>MonolithandHolding</li>
+        <li>Gha_AbandonedFacilityObelisks_A</li>
+        <li>AbandonedHoldingFacility_A</li>
       </structureLayoutDefs>
       <scatterThings>
         <li>Gold</li>

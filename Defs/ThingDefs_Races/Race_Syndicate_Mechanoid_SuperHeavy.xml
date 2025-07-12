@@ -10,7 +10,7 @@
           <MoveSpeed>3.2</MoveSpeed>
           <EnergyShieldRechargeRate>0.25</EnergyShieldRechargeRate>
           <EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax>
-          <BandwidthCost>2</BandwidthCost>
+          <BandwidthCost>4</BandwidthCost>
           <ControlTakingTime>18</ControlTakingTime>
           <EMPResistance>0.8</EMPResistance>
           <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
@@ -38,7 +38,6 @@
             </li>
           </lifeStageAges>
           <baseHealthScale>5.2</baseHealthScale>
-          <soundAmbience>Pawn_Mech_Apocriton_Ambience</soundAmbience>
           <detritusLeavings>
             <li>
               <def>ChunkMechanoidSlag</def>
@@ -97,38 +96,37 @@
         <race>Mech_Gha_Bulwark</race>
         <combatPower>600</combatPower>
         <maxPerGroup>3</maxPerGroup>
-        <isBoss>true</isBoss>
+        <isBoss>False</isBoss>
         <allowInMechClusters>false</allowInMechClusters>
         <lifeStages>
           <li>
             <bodyGraphicData>
-              <texPath>Things/Pawn/Mechanoid/Apocriton</texPath>
-              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Apocriton</maskPath>
+              <texPath>Things/Pawn/Mechanoid/Bulwark/Clean/BulwarkClean</texPath>
+              <maskPath>Things/Pawn/Mechanoid/Bulwark/AllegianceOverlays/Mech_Bulwark</maskPath>
               <shaderType>CutoutWithOverlay</shaderType>
               <graphicClass>Graphic_Multi</graphicClass>
-              <drawSize>2</drawSize>
+              <drawSize>3</drawSize>
             </bodyGraphicData>
           </li>
           <li>
             <bodyGraphicData>
-              <texPath>Things/Pawn/Mechanoid/ApocritonAncient</texPath>
-              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Apocriton</maskPath>
+              <texPath>Things/Pawn/Mechanoid/Bulwark/Bulwark</texPath>
+              <maskPath>Things/Pawn/Mechanoid/Bulwark/AllegianceOverlays/Mech_Bulwark</maskPath>
               <shaderType>CutoutWithOverlay</shaderType>
               <graphicClass>Graphic_Multi</graphicClass>
-              <drawSize>2</drawSize>
+              <drawSize>3</drawSize>
             </bodyGraphicData>
           </li>
         </lifeStages>
         <weaponMoney>9999~9999</weaponMoney>
+        <fixedInventory>
+          <Gha_MeleeWeapon_PlasmaBroadSword/>
+        </fixedInventory>
         <weaponTags>
-          <li>MeleeSyndicateMech</li>
+          <li></li>
         </weaponTags>
         <techHediffsChance>1</techHediffsChance>
         <techHediffsMoney>9999~9999</techHediffsMoney>
-        <abilities>
-          <li>LongjumpMech</li>
-          <li>ResurrectionMech</li>
-        </abilities>
         <skipResistant>true</skipResistant>
     </PawnKindDef>
 </Defs>
