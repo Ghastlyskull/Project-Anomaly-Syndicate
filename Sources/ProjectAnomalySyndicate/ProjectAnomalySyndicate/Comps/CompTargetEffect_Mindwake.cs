@@ -9,7 +9,19 @@ using Verse;
 
 namespace ProjectAnomalySyndicate
 {
+    public class CompProperties_TargetEffectMindwake : CompProperties
+    {
+        public ThingDef moteDef;
 
+        public bool withSideEffects = true;
+
+        public HediffDef addsHediff;
+
+        public CompProperties_TargetEffectMindwake()
+        {
+            compClass = typeof(CompTargetEffect_Mindwake);
+        }
+    }
     public class CompTargetEffect_Mindwake : CompTargetEffect
     {
         public CompProperties_TargetEffectMindwake Props => (CompProperties_TargetEffectMindwake)props;

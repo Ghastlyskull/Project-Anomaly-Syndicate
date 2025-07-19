@@ -8,6 +8,13 @@ using Verse;
 
 namespace ProjectAnomalySyndicate
 {
+    public class CompProperties_MindWake : HediffCompProperties
+    {
+        public CompProperties_MindWake()
+        {
+            compClass = typeof(CompMindWake);
+        }
+    }
     public class CompMindWake : HediffComp
     {
         HairDef hair = null;

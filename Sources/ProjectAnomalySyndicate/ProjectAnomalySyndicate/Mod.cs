@@ -11,9 +11,7 @@ namespace ProjectAnomalySyndicate
     public class Mod : Verse.Mod
     {
         public Mod(ModContentPack content) : base(content)
-        {
-            Harmony harmony = new Harmony(content.PackageId);
-            harmony.PatchAll();
+        { 
         }
     }
 }

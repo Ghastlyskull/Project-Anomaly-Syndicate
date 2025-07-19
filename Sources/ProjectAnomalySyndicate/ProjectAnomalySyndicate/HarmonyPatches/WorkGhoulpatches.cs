@@ -15,13 +15,13 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
     [HarmonyPatch]
     public static class WorkTabGhoulsPatch
     {
-        private static MethodBase TargetMethod()
+        public static MethodBase TargetMethod()
         {
             return AccessTools.Method(typeof(MainTabWindow_Work), "get_Pawns");
         }
-        private static void Postfix(ref IEnumerable<Pawn> __result, MainTabWindow_Schedule __instance)
+        public static void Postfix(ref IEnumerable<Pawn> __result, MainTabWindow_Schedule __instance)
         {
-            __result = __result.Concat(Find.CurrentMap.mapPawns.ColonyMutantsPlayerControlled.Where(c => c.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake)))));
+            __result = __result.Concat(Find.CurrentMap.mapPawns.SpawnedColonySubhumansPlayerControlled.Where(c => c.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake)))));
         }
     }
     [HarmonyPatch]

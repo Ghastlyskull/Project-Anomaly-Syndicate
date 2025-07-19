@@ -16,7 +16,7 @@ namespace ProjectAnomalySyndicate
         {
             return new TargetingParameters
             {
-                canTargetMutants = true,
+                canTargetSubhumans = true,
                 canTargetBuildings = false
             };
         }

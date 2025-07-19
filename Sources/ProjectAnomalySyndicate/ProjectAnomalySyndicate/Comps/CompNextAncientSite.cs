@@ -10,6 +10,13 @@ using Verse;
 
 namespace ProjectAnomalySyndicate
 {
+    public class CompProperties_NextAncientSite : CompProperties
+    {
+        public CompProperties_NextAncientSite()
+        {
+            compClass = typeof(CompNextAncientSite);
+        }
+    }
     public class CompNextAncientSite : ThingComp
     {
         public override void ReceiveCompSignal(string signal)

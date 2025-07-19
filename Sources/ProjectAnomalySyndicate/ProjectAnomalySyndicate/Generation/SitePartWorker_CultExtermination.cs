@@ -42,7 +42,7 @@ namespace ProjectAnomalySyndicate.Generation
                 }).ToList());
             }
             DistressCallUtility.SpawnPawns(map, cultists, map.Center, 20);
-            Lord lord = LordMaker.MakeNewLord(Faction.OfHoraxCult, new LordJob_DefendBase(Faction.OfHoraxCult, map.Center), map, cultists);
+            Lord lord = LordMaker.MakeNewLord(Faction.OfHoraxCult, new LordJob_DefendBase(Faction.OfHoraxCult, map.Center, 180000), map, cultists);
             foreach (Thing allThing in map.listerThings.AllThings)
             {
                 if (allThing.def.category == ThingCategory.Item)

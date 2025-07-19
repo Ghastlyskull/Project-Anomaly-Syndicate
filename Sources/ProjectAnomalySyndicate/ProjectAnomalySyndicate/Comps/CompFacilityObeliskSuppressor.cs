@@ -8,6 +8,16 @@ using Verse;
 
 namespace ProjectAnomalySyndicate
 {
+    public class CompProperties_FacilityObeliskSuppressor : CompProperties_Facility
+    {
+        public float activityDecreasePerTick = 1f;
+        public CompProperties_FacilityObeliskSuppressor()
+        {
+            compClass = typeof(CompFacilityObeliskSuppressor);
+        }
+
+
+    }
     public class CompFacilityObeliskSuppressor : CompFacilityInactiveWhenElectricityDisabled
     {
         public new CompProperties_FacilityObeliskSuppressor Props => (CompProperties_FacilityObeliskSuppressor)props;
