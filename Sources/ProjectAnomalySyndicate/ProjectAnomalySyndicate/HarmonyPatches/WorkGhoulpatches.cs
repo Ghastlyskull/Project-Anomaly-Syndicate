@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -27,13 +28,13 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
     [HarmonyPatch]
     public static class AssignTabGhoulsPatch
     {
-        private static MethodBase TargetMethod()
+        public static MethodBase TargetMethod()
         {
             return AccessTools.Method(typeof(MainTabWindow_Assign), "get_Pawns");
         }
-        private static void Postfix(ref IEnumerable<Pawn> __result, MainTabWindow_Assign __instance)
+        public static void Postfix(ref IEnumerable<Pawn> __result, MainTabWindow_Assign __instance)
         {
-            __result = __result.Concat(Find.CurrentMap.mapPawns.ColonyMutantsPlayerControlled.Where(c => c.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake)))));
+            __result = __result.Concat(Find.CurrentMap.mapPawns.SpawnedColonySubhumansPlayerControlled.Where(c => c.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake)))));
         }
     }
     #endregion
@@ -42,11 +43,11 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
     [HarmonyPatch]
     public static class GetCurrentOutfitPolicyPatch
     {
-        private static MethodBase TargetMethod()
+        public static MethodBase TargetMethod()
         {
             return AccessTools.Method(typeof(Pawn_OutfitTracker), "get_CurrentApparelPolicy");
         }
-        private static void Postfix(ref ApparelPolicy __result, Pawn_OutfitTracker __instance)
+        public static void Postfix(ref ApparelPolicy __result, Pawn_OutfitTracker __instance)
         {
             if (__instance.pawn.IsMutant && __instance.pawn.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake))))
             {
@@ -58,11 +59,11 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
     [HarmonyPatch]
     public static class GetCurrentDrugPolicyPatch
     {
-        private static MethodBase TargetMethod()
+        public static MethodBase TargetMethod()
         {
             return AccessTools.Method(typeof(Pawn_DrugPolicyTracker), "get_CurrentPolicy");
         }
-        private static void Postfix(ref DrugPolicy __result, Pawn_DrugPolicyTracker __instance)
+        public static void Postfix(ref DrugPolicy __result, Pawn_DrugPolicyTracker __instance)
         {
             if (__instance.pawn.IsMutant && __instance.pawn.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake))))
             {
@@ -73,11 +74,11 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
     [HarmonyPatch]
     public static class GetCurrentFoodPolicyPatch
     {
-        private static MethodBase TargetMethod()
+        public static MethodBase TargetMethod()
         {
             return AccessTools.Method(typeof(Pawn_FoodRestrictionTracker), "get_CurrentFoodPolicy");
         }
-        private static void Postfix(ref FoodPolicy __result, Pawn_FoodRestrictionTracker __instance)
+        public static void Postfix(ref FoodPolicy __result, Pawn_FoodRestrictionTracker __instance)
         {
             if (__instance.pawn.IsMutant && __instance.pawn.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake))))
             {
@@ -88,11 +89,11 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
     [HarmonyPatch]
     public static class GetCurrentReadingPolicyPatch
     {
-        private static MethodBase TargetMethod()
+        public static MethodBase TargetMethod()
         {
             return AccessTools.Method(typeof(Pawn_ReadingTracker), "get_CurrentPolicy");
         }
-        private static void Postfix(ref ReadingPolicy __result, Pawn_ReadingTracker __instance)
+        public static void Postfix(ref ReadingPolicy __result, Pawn_ReadingTracker __instance)
         {
             if (__instance.pawn.IsMutant && __instance.pawn.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake))))
             {
@@ -104,24 +105,52 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
     }
     #endregion
 
-    #region OrderPatch
+    #region FloatMenuProviderPatch
     [HarmonyPatch]
-    public static class FloatMenuMakerGetOptionsWorkGhoulPatch
+    public static class FloatMenuOptionProviderGhoulMindWakePatch
     {
-        private static MethodBase TargetMethod()
+        public static bool HasMindWake(Pawn p)
         {
-            return AccessTools.Method(typeof(FloatMenuMakerMap), "AddMutantOrders");
+            return p.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake)));
         }
-        private static bool Prefix(Vector3 clickPos, Pawn pawn, List<FloatMenuOption> opts)
+        public static MethodBase TargetMethod()
         {
-            if (pawn.IsMutant && pawn.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake))))
+            return AccessTools.Method(typeof(FloatMenuOptionProvider), "SelectedPawnValid");
+        }
+        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        {
+            bool doCount = false;
+            bool doWork = false;
+            int count = 0;
+            object target = null;
+            foreach (CodeInstruction instruction in instructions)
             {
-                AccessTools.Method(typeof(FloatMenuMakerMap), "AddHumanlikeOrders").Invoke(null, new object[] { clickPos, pawn, opts });
-                return false;
+                if (doCount)
+                {
+                    count++;
+                    if(count == 1)
+                    {
+                        target = instruction.operand;
+                    }
+                    if(count == 2)
+                    {
+                        doCount = false;
+                        doWork = true;
+                    }
+                }
+                if (doWork)
+                {
+                    doWork = false;
+                    yield return new(OpCodes.Ldarg_1);
+                    yield return new(OpCodes.Call, AccessTools.Method(typeof(FloatMenuOptionProviderGhoulMindWakePatch), nameof(HasMindWake)));
+                    yield return new(OpCodes.Brtrue, target);
+                }
+                if (instruction.Calls(AccessTools.Method(typeof(Pawn), "get_IsMutant")))
+                {
+                    doCount = true;
+                }
+                yield return instruction;
             }
-            return true;
-
-
         }
     }
     #endregion
@@ -130,11 +159,11 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
     [HarmonyPatch]
     public static class ITab_Pawn_Gear_CanControlColonistPatch
     {
-        private static MethodBase TargetMethod()
+        public static MethodBase TargetMethod()
         {
             return AccessTools.Method(typeof(ITab_Pawn_Gear), "get_CanControlColonist");
         }
-        private static void Postfix(ITab_Pawn_Gear __instance, ref bool __result)
+        public static void Postfix(ITab_Pawn_Gear __instance, ref bool __result)
         {
 
             if (__instance.SelPawnForGear != null && __instance.SelPawnForGear.Spawned && __instance.SelPawnForGear.Faction.IsPlayer && __instance.SelPawnForGear.RaceProps.Humanlike && __instance.SelPawnForGear.IsMutant && __instance.SelPawnForGear.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake))))
@@ -151,11 +180,11 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
     [HarmonyPatch]
     public static class ApparelImplantCheckPatch
     {
-        private static MethodBase TargetMethod()
+        public static MethodBase TargetMethod()
         {
-            return AccessTools.Method(typeof(EquipmentUtility), "CanEquip", new Type[] {typeof(Thing), typeof(Pawn), typeof(string).MakeByRefType(), typeof(bool)});
+            return AccessTools.Method(typeof(EquipmentUtility), "CanEquip", new Type[] { typeof(Thing), typeof(Pawn), typeof(string).MakeByRefType(), typeof(bool) });
         }
-        private static void Postfix(ref bool __result, Thing thing, Pawn pawn, out string cantReason, bool checkBonded = true)
+        public static void Postfix(ref bool __result, Thing thing, Pawn pawn, out string cantReason, bool checkBonded = true)
         {
             if (__result && pawn.IsMutant && pawn.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake)) && pawn.health.hediffSet.hediffs.Any(c => c.def == HediffDefOf.GhoulBarbs || c.def == HediffDefOf.GhoulPlating)) && thing.def.apparel.bodyPartGroups.Any(c => c == BodyPartGroupDefOf.Torso || c == BodyPartGroupDefOf.Legs))
             {

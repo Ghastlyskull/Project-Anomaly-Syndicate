@@ -9,18 +9,19 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ProjectAnomalySyndicate</RootNamespace>
     <AssemblyName>ProjectAnomalySyndicate</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <LangVersion>8.0</LangVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>latest</LangVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\Assemblies\</OutputPath>
+    <OutputPath>..\..\..\1.6\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -44,18 +45,17 @@
     <Reference Include="System.Xml" />
     <Reference Include="VEF">
       <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompNextAncientSite.cs" />
-    <Compile Include="CompProperties_RandomAnomalySpawner.cs" />
-    <Compile Include="CompProperties_ChanceBeaconSpawner.cs" />
-    <Compile Include="CompProperties_NextAncientSite.cs" />
-    <Compile Include="CompProperties_TargetEffectMindwake.cs" />
-    <Compile Include="CompTargetable_SingleMutant.cs" />
-    <Compile Include="CompMindWake.cs" />
-    <Compile Include="CompProperties_MindWake.cs" />
-    <Compile Include="CompTargetEffect_Mindwake.cs" />
+    <Compile Include="Comps\CompNextAncientSite.cs" />
+    <Compile Include="Comps\CompRandomAnomalySpawner.cs" />
+    <Compile Include="Comps\CompChanceBeaconSpawner.cs" />
+    <Compile Include="Comps\CompTargetable_SingleMutant.cs" />
+    <Compile Include="Comps\CompMindWake.cs" />
+    <Compile Include="Comps\CompTargetEffect_Mindwake.cs" />
+    <Compile Include="FloatMenuOptionProvider_TransferEntityToTransporter.cs" />
     <Compile Include="Generation\GenStep_DamageWalls.cs" />
     <Compile Include="Generation\GenStep_DestroyDoors.cs" />
     <Compile Include="Generation\SitePartWorker_CultRitual.cs" />
@@ -63,23 +63,23 @@
     <Compile Include="Generation\SitePartWorker_AnomalyExtermination.cs" />
     <Compile Include="HarmonyPatches\DevourerAbortDigestionSpitbanePatch.cs" />
     <Compile Include="HarmonyPatches\GenerateBestowingCeremonyQuestPatch.cs" />
+    <Compile Include="HarmonyPatches\HarmonyStarter.cs" />
     <Compile Include="HarmonyPatches\HypnosisResistancePatches.cs" />
     <Compile Include="HarmonyPatches\RitualOutcomeBestowingPatch.cs" />
     <Compile Include="HarmonyPatches\TransferEntityToTransporterPatch.cs" />
     <Compile Include="HarmonyPatches\WillingToTradeAnomaliesPatch.cs" />
-    <Compile Include="HarmonyPatches\WorkGhoulpatches.cs" />
-    <Compile Include="HypnosisResistanceModExtension.cs" />
-    <Compile Include="InvisibilityDisruptorModExtension.cs" />
-    <Compile Include="BloodRainResistanceModExtension.cs" />
-    <Compile Include="CompFacilityObeliskSuppressor.cs" />
-    <Compile Include="CompProperties_FacilityObeliskSuppressor.cs" />
+    <Compile Include="HarmonyPatches\WorkGhoulPatches.cs" />
+    <Compile Include="ModExtensions\HypnosisResistanceModExtension.cs" />
+    <Compile Include="ModExtensions\InvisibilityDisruptorModExtension.cs" />
+    <Compile Include="ModExtensions\BloodRainResistanceModExtension.cs" />
+    <Compile Include="Comps\CompFacilityObeliskSuppressor.cs" />
     <Compile Include="DefOfs.cs" />
     <Compile Include="HarmonyPatches\BloodRainTickRestistancePatch.cs" />
     <Compile Include="HarmonyPatches\HediffCompInvisibilityForcedVisiblePatch.cs" />
     <Compile Include="HarmonyPatches\ObeliskActivitySupressedInspectStringPatch.cs" />
     <Compile Include="IncidentWorker_SyndicateTributeCollector.cs" />
-    <Compile Include="JobDriver_TransferEntityToTransporter.cs" />
-    <Compile Include="JobDriver_UseMindwake.cs" />
+    <Compile Include="JobDrivers\JobDriver_TransferEntityToTransporter.cs" />
+    <Compile Include="JobDrivers\JobDriver_UseMindwake.cs" />
     <Compile Include="Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quests\QuestNode_AnomalyCheckSequence.cs" />
