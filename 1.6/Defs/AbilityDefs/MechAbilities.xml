@@ -36,7 +36,6 @@
     <explosionRadius>1.5</explosionRadius>
     <screenShakeFactor>0.5</screenShakeFactor>
     <speed>45</speed>
-    <bulletChanceToStartFire>1.0</bulletChanceToStartFire>
   </projectile>
 </ThingDef>
 
@@ -77,7 +76,6 @@
     <explosionRadius>1.5</explosionRadius>
     <screenShakeFactor>0.5</screenShakeFactor>
     <speed>35</speed>
-    <bulletChanceToStartFire>1.0</bulletChanceToStartFire>
   </projectile>
 </ThingDef>
 </Defs>
