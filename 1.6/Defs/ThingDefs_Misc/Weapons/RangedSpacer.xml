@@ -94,7 +94,6 @@
           <damageAmountBase>17</damageAmountBase>
           <armorPenetrationBase>0.65</armorPenetrationBase>
           <speed>75</speed>
-          <bulletChanceToStartFire>0.3</bulletChanceToStartFire>
         </projectile>
       </ThingDef>
 
@@ -193,7 +192,6 @@
     <damageAmountBase>65</damageAmountBase>
     <armorPenetrationBase>0.75</armorPenetrationBase>
     <speed>75</speed>
-    <bulletChanceToStartFire>0.7</bulletChanceToStartFire>
   </projectile>
 </ThingDef>
 
@@ -292,7 +290,6 @@
     <damageAmountBase>7</damageAmountBase>
     <armorPenetrationBase>0.75</armorPenetrationBase>
     <speed>75</speed>
-    <bulletChanceToStartFire>0.1</bulletChanceToStartFire>
   </projectile>
 </ThingDef>
 <!--Mechanoid Weapons-->
@@ -401,41 +398,41 @@
     <li>RangedHeavy</li>
   </weaponClasses>
   <verbs>
-    <li>
-      <verbClass>Verb_ShootBeam</verbClass>
-      <hasStandardCommand>true</hasStandardCommand>
-      <warmupTime>1.8</warmupTime>
-      <range>24.9</range>
-      <minRange>1.9</minRange>
-      <beamFullWidthRange>6.9</beamFullWidthRange>
-      <burstShotCount>10</burstShotCount>
-      <showBurstShotStats>false</showBurstShotStats>
-      <beamWidth>6</beamWidth>
-      <ticksBetweenBurstShots>27</ticksBetweenBurstShots>
-      <beamDamageDef>Gha_PlasmaBeam</beamDamageDef>
-      <soundCastTail>GunTail_Medium</soundCastTail>
-      <muzzleFlashScale>9</muzzleFlashScale>
-      <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
-      <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
-      <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
-      <beamMaxDeviation>1.5</beamMaxDeviation>
-      <beamCurvature>0.6</beamCurvature>
-      <beamMoteDef>Gha_Mote_GraserBeamBase</beamMoteDef>
-      <beamEndEffecterDef>Gha_GraserBeam_End</beamEndEffecterDef>
-      <beamChanceToStartFire>0.85</beamChanceToStartFire>
-      <beamChanceToAttachFire>0.85</beamChanceToAttachFire>
-      <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
-      <beamLineFleckDef>Gha_Fleck_BeamSpark</beamLineFleckDef>
-      <beamStartOffset>0.8</beamStartOffset>
-      <beamLineFleckChanceCurve>
-        <points>
-          <li>(0, 0)</li>
-          <li>(0.65, 0.4)</li>
-          <li>(1, 0.75)</li>
-        </points>
-      </beamLineFleckChanceCurve>
-    </li>
-  </verbs>
+      <li>
+        <verbClass>Verb_ShootBeam</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.0</warmupTime>
+        <range>24.9</range>
+        <minRange>3.9</minRange>
+        <beamFullWidthRange>6.9</beamFullWidthRange>
+        <burstShotCount>5</burstShotCount>
+        <showBurstShotStats>false</showBurstShotStats>
+        <beamWidth>6</beamWidth>
+        <ticksBetweenBurstShots>22</ticksBetweenBurstShots>
+        <beamDamageDef>Beam</beamDamageDef>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+        <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
+        <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+        <beamMaxDeviation>1.5</beamMaxDeviation>
+        <beamCurvature>0.6</beamCurvature>
+        <beamMoteDef>Mote_GraserBeamBase</beamMoteDef>
+        <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
+        <beamChanceToStartFire>0.85</beamChanceToStartFire>
+        <beamChanceToAttachFire>0.85</beamChanceToAttachFire>
+        <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
+        <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
+        <beamStartOffset>0.8</beamStartOffset>
+        <beamLineFleckChanceCurve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(0.65, 0.4)</li>
+            <li>(1, 0.75)</li>
+          </points>
+        </beamLineFleckChanceCurve>
+      </li>
+    </verbs>
   <!--
   <verbs>
     <li>
@@ -471,11 +468,6 @@
       <cooldownTime>2</cooldownTime>
     </li>
   </tools>
-  <comps>
-    <li Class="AthenaFramework.CompProperties_EquippableAbility">
-      <ability>Vanguard_Beam_Overcharge</ability>
-    </li>
-  </comps>
 </ThingDef>
 
 <!--Void Mechanoid Weapons-->
@@ -510,41 +502,41 @@
     <li>RangedHeavy</li>
   </weaponClasses>
   <verbs>
-    <li>
-      <verbClass>Verb_ShootBeam</verbClass>
-      <hasStandardCommand>true</hasStandardCommand>
-      <warmupTime>1.8</warmupTime>
-      <range>24.9</range>
-      <minRange>1.9</minRange>
-      <beamFullWidthRange>6.9</beamFullWidthRange>
-      <burstShotCount>10</burstShotCount>
-      <showBurstShotStats>false</showBurstShotStats>
-      <beamWidth>6</beamWidth>
-      <ticksBetweenBurstShots>27</ticksBetweenBurstShots>
-      <beamDamageDef>Gha_PlasmaBeam_Void</beamDamageDef>
-      <soundCastTail>GunTail_Medium</soundCastTail>
-      <muzzleFlashScale>9</muzzleFlashScale>
-      <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
-      <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
-      <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
-      <beamMaxDeviation>1.5</beamMaxDeviation>
-      <beamCurvature>0.6</beamCurvature>
-      <beamMoteDef>Gha_Mote_GraserBeamBase_Void</beamMoteDef>
-      <beamEndEffecterDef>Gha_GraserBeam_End_Void</beamEndEffecterDef>
-      <beamChanceToStartFire>0.85</beamChanceToStartFire>
-      <beamChanceToAttachFire>0.85</beamChanceToAttachFire>
-      <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
-      <beamLineFleckDef>Gha_Fleck_BeamSpark_Void</beamLineFleckDef>
-      <beamStartOffset>0.8</beamStartOffset>
-      <beamLineFleckChanceCurve>
-        <points>
-          <li>(0, 0)</li>
-          <li>(0.65, 0.4)</li>
-          <li>(1, 0.75)</li>
-        </points>
-      </beamLineFleckChanceCurve>
-    </li>
-  </verbs>
+      <li>
+        <verbClass>Verb_ShootBeam</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.0</warmupTime>
+        <range>24.9</range>
+        <minRange>3.9</minRange>
+        <beamFullWidthRange>6.9</beamFullWidthRange>
+        <burstShotCount>5</burstShotCount>
+        <showBurstShotStats>false</showBurstShotStats>
+        <beamWidth>6</beamWidth>
+        <ticksBetweenBurstShots>22</ticksBetweenBurstShots>
+        <beamDamageDef>Beam</beamDamageDef>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+        <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
+        <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+        <beamMaxDeviation>1.5</beamMaxDeviation>
+        <beamCurvature>0.6</beamCurvature>
+        <beamMoteDef>Mote_GraserBeamBase</beamMoteDef>
+        <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
+        <beamChanceToStartFire>0.85</beamChanceToStartFire>
+        <beamChanceToAttachFire>0.85</beamChanceToAttachFire>
+        <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
+        <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
+        <beamStartOffset>0.8</beamStartOffset>
+        <beamLineFleckChanceCurve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(0.65, 0.4)</li>
+            <li>(1, 0.75)</li>
+          </points>
+        </beamLineFleckChanceCurve>
+      </li>
+    </verbs>
   <tools>
     <li>
       <label>stock</label>
@@ -564,11 +556,6 @@
       <cooldownTime>2</cooldownTime>
     </li>
   </tools>
-  <comps>
-    <li Class="AthenaFramework.CompProperties_EquippableAbility">
-      <ability>Void_Vanguard_Beam_Overcharge</ability>
-    </li>
-  </comps>
 </ThingDef>
 
 <!-- Void Needler-->
