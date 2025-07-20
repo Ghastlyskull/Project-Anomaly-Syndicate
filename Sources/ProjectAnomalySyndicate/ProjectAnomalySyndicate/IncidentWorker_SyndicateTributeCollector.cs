@@ -42,7 +42,7 @@ namespace ProjectAnomalySyndicate
         protected override bool CanFireNowSub(IncidentParms parms)
         {
             Faction ghaFaction = Find.FactionManager.FirstFactionOfDef(FactionDef.Named("Gha_Syndicate"));
-            return base.CanFireNowSub(parms) && ghaFaction != null && this.FactionCanBeGroupSource(ghaFaction, (Map)parms.target, false);
+            return base.CanFireNowSub(parms) && ghaFaction != null && this.FactionCanBeGroupSource(ghaFaction, parms, false);
         }
 
         // Determine the commonality for the trader kind

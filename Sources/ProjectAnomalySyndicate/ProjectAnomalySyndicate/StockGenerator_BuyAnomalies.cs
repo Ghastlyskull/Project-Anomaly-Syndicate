@@ -12,7 +12,7 @@ namespace ProjectAnomalySyndicate
     public class StockGenerator_BuyAnomalies : StockGenerator
     {
         // Generates an empty list of things (usually, this would generate pawns/items for sale)
-        public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
+        public override IEnumerable<Thing> GenerateThings(PlanetTile forTile, Faction faction = null)
         {
             return Enumerable.Empty<Thing>();
         }

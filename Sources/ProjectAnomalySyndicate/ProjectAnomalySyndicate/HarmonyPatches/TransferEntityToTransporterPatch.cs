@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+﻿/*using HarmonyLib;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -46,7 +46,7 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
                     void CarryToShuttleAct()
                     {
                         CompShuttle compShuttle = shuttleThing.TryGetComp<CompShuttle>();
-                        if (!compShuttle.LoadingInProgressOrReadyToLaunch)
+                        if (!compShuttle.Transporter.LoadingInProgressOrReadyToLaunch)
                         {
                             TransporterUtility.InitiateLoading(Gen.YieldSingle(compShuttle.Transporter));
                         }
@@ -66,3 +66,4 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
         }
     }
 }
+*/

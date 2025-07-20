@@ -27,6 +27,7 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
                         resistance += thing.def.GetModExtension<BloodRainResistanceModExtension>().bloodRainResistance;
                     }
                 }
+                Log.Message(severity);
                 severity *= 1f - resistance;
             }
             return severity;
@@ -51,7 +52,7 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
                     edit = false;
                     yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(BloodRainTickResistanceHelper), nameof(BloodRainTickResistanceHelper.AdjustSeverityRate)));
                 }
-                if(instruction.opcode == OpCodes.Ldfld && instruction.operand == AccessTools.Field(typeof(Hediff_BloodRage), "adjustedSeverityRaisePerTick"))
+                if(instruction.opcode == OpCodes.Ldfld && (FieldInfo)instruction.operand == AccessTools.Field(typeof(Hediff_BloodRage), "adjustedSeverityRaisePerTick"))
                 {
                     edit = true;
                     yield return new CodeInstruction(OpCodes.Ldarg_0);

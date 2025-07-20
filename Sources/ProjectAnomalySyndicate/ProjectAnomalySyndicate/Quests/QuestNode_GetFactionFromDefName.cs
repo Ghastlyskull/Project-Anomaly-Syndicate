@@ -30,7 +30,7 @@ namespace ProjectAnomalySyndicate.Quests
         private void SetVars(Slate slate)
         {
             string val = defName.GetValue(slate);
-            Find.FactionManager.GetFactions().Where(c => c.def.defName == val).TryRandomElement(out Faction faction);
+            Find.FactionManager.GetFactions(true, true, true).Where(c => c.def.defName == val).TryRandomElement(out Faction faction);
             slate.Set(storeAs.GetValue(slate), faction);
         }
     }

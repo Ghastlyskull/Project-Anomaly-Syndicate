@@ -25,7 +25,7 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
                 Slate slate = new Slate();
                 slate.Set("titleHolder", pawn);
                 slate.Set("bestowingFaction", faction);
-                if (DefOfs.Gha_BestowingCeremony.CanRun(slate))
+                if (DefOfs.Gha_BestowingCeremony.CanRun(slate, pawn.MapHeld))
                 {
                     Quest quest = QuestUtility.GenerateQuestAndMakeAvailable(DefOfs.Gha_BestowingCeremony, slate);
                     if (quest.root.sendAvailableLetter)
