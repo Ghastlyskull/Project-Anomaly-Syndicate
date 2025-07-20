@@ -29,7 +29,7 @@ namespace ProjectAnomalySyndicate
                 foreach (Building building in LinkedBuildings)
                 {
                     CompObelisk comp = building.TryGetComp<CompObelisk>();
-                    comp?.ActivityComp.AdjustActivity(comp?.ActivityComp.suppressIfAbove < comp?.ActivityComp.ActivityLevel ? -Props.activityDecreasePerTick : 0);
+                    comp?.ActivityComp.AdjustActivity(comp?.ActivityComp.suppressIfAbove < comp?.ActivityComp.ActivityLevel ? - Props.activityDecreasePerTick : 0);
                 }
             }
 

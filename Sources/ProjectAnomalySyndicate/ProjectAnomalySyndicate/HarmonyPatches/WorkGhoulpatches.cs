@@ -39,72 +39,6 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
     }
     #endregion
 
-    #region PoliciesPatches
-    [HarmonyPatch]
-    public static class GetCurrentOutfitPolicyPatch
-    {
-        public static MethodBase TargetMethod()
-        {
-            return AccessTools.Method(typeof(Pawn_OutfitTracker), "get_CurrentApparelPolicy");
-        }
-        public static void Postfix(ref ApparelPolicy __result, Pawn_OutfitTracker __instance)
-        {
-            if (__instance.pawn.IsMutant && __instance.pawn.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake))))
-            {
-                __result = Current.Game.outfitDatabase.DefaultOutfit();
-
-            }
-        }
-    }
-    [HarmonyPatch]
-    public static class GetCurrentDrugPolicyPatch
-    {
-        public static MethodBase TargetMethod()
-        {
-            return AccessTools.Method(typeof(Pawn_DrugPolicyTracker), "get_CurrentPolicy");
-        }
-        public static void Postfix(ref DrugPolicy __result, Pawn_DrugPolicyTracker __instance)
-        {
-            if (__instance.pawn.IsMutant && __instance.pawn.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake))))
-            {
-                __result = Current.Game.drugPolicyDatabase.DefaultDrugPolicy();
-            }
-        }
-    }
-    [HarmonyPatch]
-    public static class GetCurrentFoodPolicyPatch
-    {
-        public static MethodBase TargetMethod()
-        {
-            return AccessTools.Method(typeof(Pawn_FoodRestrictionTracker), "get_CurrentFoodPolicy");
-        }
-        public static void Postfix(ref FoodPolicy __result, Pawn_FoodRestrictionTracker __instance)
-        {
-            if (__instance.pawn.IsMutant && __instance.pawn.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake))))
-            {
-                __result = Current.Game.foodRestrictionDatabase.DefaultFoodRestriction();
-            }
-        }
-    }
-    [HarmonyPatch]
-    public static class GetCurrentReadingPolicyPatch
-    {
-        public static MethodBase TargetMethod()
-        {
-            return AccessTools.Method(typeof(Pawn_ReadingTracker), "get_CurrentPolicy");
-        }
-        public static void Postfix(ref ReadingPolicy __result, Pawn_ReadingTracker __instance)
-        {
-            if (__instance.pawn.IsMutant && __instance.pawn.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake))))
-            {
-                __result = Current.Game.readingPolicyDatabase.DefaultReadingPolicy();
-
-            }
-
-        }
-    }
-    #endregion
-
     #region FloatMenuProviderPatch
     [HarmonyPatch]
     public static class FloatMenuOptionProviderGhoulMindWakePatch
@@ -151,27 +85,6 @@ namespace ProjectAnomalySyndicate.HarmonyPatches
                 }
                 yield return instruction;
             }
-        }
-    }
-    #endregion
-
-    #region GearTabPatches
-    [HarmonyPatch]
-    public static class ITab_Pawn_Gear_CanControlColonistPatch
-    {
-        public static MethodBase TargetMethod()
-        {
-            return AccessTools.Method(typeof(ITab_Pawn_Gear), "get_CanControlColonist");
-        }
-        public static void Postfix(ITab_Pawn_Gear __instance, ref bool __result)
-        {
-
-            if (__instance.SelPawnForGear != null && __instance.SelPawnForGear.Spawned && __instance.SelPawnForGear.Faction.IsPlayer && __instance.SelPawnForGear.RaceProps.Humanlike && __instance.SelPawnForGear.IsMutant && __instance.SelPawnForGear.health.hediffSet.hediffs.Any(x => x.def.HasComp(typeof(CompMindWake))))
-            {
-                __result = true;
-            }
-
-
         }
     }
     #endregion

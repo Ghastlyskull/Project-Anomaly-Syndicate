@@ -45,10 +45,12 @@
             <useLabel>Use {0_label}</useLabel>
             <useDuration>0</useDuration>
             <showUseGizmo>true</showUseGizmo>
+            <allowedMutants>
+              <li>GhoulWork</li>
+            </allowedMutants>
           </li>
           <li Class="CompProperties_Targetable">
             <compClass>ProjectAnomalySyndicate.CompTargetable_SingleMutant</compClass>
-            
           </li>
           <li Class="ProjectAnomalySyndicate.CompProperties_TargetEffectMindwake">
             <withSideEffects>false</withSideEffects>

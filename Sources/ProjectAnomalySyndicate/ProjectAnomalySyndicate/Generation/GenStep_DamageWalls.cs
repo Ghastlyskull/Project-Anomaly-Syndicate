@@ -16,11 +16,10 @@ namespace ProjectAnomalySyndicate.Generation
             List<Thing> list = map.listerThings.ThingsOfDef(ThingDefOf.Wall);
             list.ForEach((thing) =>
             {
-
                 if (thing.def == ThingDefOf.Wall && Rand.Chance(0.5f))
                 {
 
-                    thing.TakeDamage(new DamageInfo(DamageDefOf.Scratch, Rand.RangeInclusive(1, thing.HitPoints)));
+                    thing.TakeDamage(new DamageInfo(DamageDefOf.Scratch, Rand.RangeInclusive(1, thing.HitPoints - 1)));
                 }
             });
         }

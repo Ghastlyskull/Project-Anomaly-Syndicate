@@ -39,8 +39,7 @@ namespace ProjectAnomalySyndicate
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.Touch).FailOnDespawnedOrNull(TargetIndex.B).FailOnDespawnedOrNull(TargetIndex.A);
             yield return Toils_Haul.StartCarryThing(TargetIndex.B);
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch).FailOnDespawnedOrNull(TargetIndex.A);
-            Toil toil = Toils_General.Wait(600);
-            toil.WithProgressBarToilDelay(TargetIndex.A);
+            Toil toil = Toils_General.WaitWith(TargetIndex.A,600, true, true, false, TargetIndex.A);
             toil.FailOnDespawnedOrNull(TargetIndex.A);
             toil.FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
             toil.tickAction = delegate

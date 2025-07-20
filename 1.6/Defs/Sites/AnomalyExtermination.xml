@@ -28,8 +28,13 @@
     <defName>AnomalyExterminationRuins</defName>
     <linkWithSite>AnomalyExtermination</linkWithSite>
     <order>1600</order>
-    <genStep Class="GenStep_Outpost">
-      <settlementDontGeneratePawns>true</settlementDontGeneratePawns>
+    <genStep Class="GenStep_Settlement">
+      <count>1</count>
+      <nearMapCenter>true</nearMapCenter>
+      <generatePawns>false</generatePawns>
+      <postProcessSettlementParams>
+        <clearBuildingFaction>true</clearBuildingFaction>
+      </postProcessSettlementParams>
     </genStep>
   </GenStepDef>
   <GenStepDef>

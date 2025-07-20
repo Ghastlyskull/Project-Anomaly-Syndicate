@@ -33,7 +33,6 @@ namespace ProjectAnomalySyndicate.Quests
             Slate slate = QuestGen.slate;
             PawnKindDef value = kindDef.GetValue(slate);
             Faction value2 = faction.GetValue(slate);
-
             Pawn pawn = PawnGenerator.GeneratePawn(value, value2);
             
             if (storeAs.GetValue(slate) != null)

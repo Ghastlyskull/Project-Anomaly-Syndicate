@@ -22,6 +22,7 @@ namespace ProjectAnomalySyndicate
         {
             base.CompPostPostAdd(dinfo);
             hair = Pawn.story.hairDef;
+            Pawn.mutant.Revert();
             MutantUtility.SetPawnAsMutantInstantly(Pawn, DefOfs.GhoulWork);
             Pawn.story.hairDef = hair;
             Pawn.Drawer.renderer.SetAllGraphicsDirty();
@@ -31,6 +32,7 @@ namespace ProjectAnomalySyndicate
         {
             base.CompPostPostRemoved();
             hair = Pawn.story.hairDef;
+            Pawn.mutant.Revert();
             MutantUtility.SetPawnAsMutantInstantly(Pawn, MutantDefOf.Ghoul);
             Pawn.story.hairDef = hair;
             Pawn.Drawer.renderer.SetAllGraphicsDirty();

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VEF.Weapons;
 using Verse;
 
 namespace ProjectAnomalySyndicate
@@ -17,7 +18,26 @@ namespace ProjectAnomalySyndicate
             return new TargetingParameters
             {
                 canTargetSubhumans = true,
-                canTargetBuildings = false
+                canTargetBuildings = false,
+                canTargetHumans = true,
+                canTargetAnimals = false,
+                canTargetBloodfeeders = false,
+                canTargetEntities = false,
+                canTargetCorpses = false,
+                canTargetFires = false,
+                canTargetItems = false,
+                canTargetLocations = false,
+                canTargetMechs = false,
+                canTargetPlants = false,
+                canTargetSelf = true,
+                validator = (c) =>
+                {
+                    if(c.Thing is Pawn p && p.IsMutant && (p.mutant.Def == MutantDefOf.Ghoul || p.mutant.Def == DefOfs.GhoulWork))
+                    {
+                        return true;
+                    }
+                    return false;
+                }
             };
         }
 

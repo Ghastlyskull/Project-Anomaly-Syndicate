@@ -22,7 +22,7 @@ namespace ProjectAnomalySyndicate
         public override void ReceiveCompSignal(string signal)
         {
             base.ReceiveCompSignal(signal);
-            if (!(signal == "Hackend"))
+            if (signal != "Hacked")
             {
                 return;
             }
